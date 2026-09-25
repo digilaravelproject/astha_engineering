@@ -24,7 +24,7 @@ import 'package:safecheck_techno/features/customer/certificate_management/presen
 import 'package:safecheck_techno/features/engineer/dashboard/presentation/pages/engineer_home_screen.dart';
 import 'package:safecheck_techno/features/engineer/dashboard/presentation/pages/engineer_main_layout_screen.dart';
 import 'package:safecheck_techno/features/engineer/site_management/presentation/pages/engineer_site_list_screen.dart';
-import 'package:safecheck_techno/features/profile/presentation/pages/profile_screen.dart';
+import 'package:safecheck_techno/features/common/profile/presentation/pages/profile_screen.dart';
 import 'package:safecheck_techno/features/common/notifications/presentation/pages/notifications_screen.dart';
 import 'package:safecheck_techno/features/admin/checkpoints_master/presentation/pages/checkpoints_list_screen.dart';
 import 'package:safecheck_techno/features/admin/checkpoints_master/presentation/pages/add_checkpoint_screen.dart';
@@ -77,8 +77,23 @@ import 'package:safecheck_techno/features/admin/equipment_management/presentatio
 import 'package:safecheck_techno/features/admin/equipment_management/presentation/pages/equipment_details_screen.dart';
 import 'package:safecheck_techno/features/admin/certificate_management/presentation/pages/certificate_list_screen.dart';
 import 'package:safecheck_techno/features/admin/customer_management/presentation/bloc/customer_form_bloc.dart';
+import 'package:safecheck_techno/features/admin/customer_management/domain/usecases/add_customer.dart';
+import 'package:safecheck_techno/features/admin/customer_management/domain/usecases/update_customer.dart';
 import 'package:safecheck_techno/features/admin/site_management/presentation/bloc/site_form_bloc.dart';
+import 'package:safecheck_techno/features/admin/site_management/domain/usecases/add_site.dart';
+import 'package:safecheck_techno/features/admin/site_management/domain/usecases/update_site.dart';
 import 'package:safecheck_techno/features/admin/equipment_management/presentation/bloc/equipment_form_bloc.dart';
+import 'package:safecheck_techno/features/admin/equipment_management/domain/usecases/add_equipment.dart';
+import 'package:safecheck_techno/features/admin/equipment_management/domain/usecases/update_equipment.dart';
+import 'package:safecheck_techno/features/admin/checkpoints_master/data/datasources/checkpoint_remote_data_source.dart';
+import 'package:safecheck_techno/features/admin/checkpoints_master/data/repositories/checkpoint_repository_impl.dart';
+import 'package:safecheck_techno/features/admin/checkpoints_master/domain/usecases/get_checkpoints.dart';
+import 'package:safecheck_techno/features/admin/checkpoints_master/presentation/bloc/checkpoint_list_bloc.dart';
+import 'package:safecheck_techno/features/admin/checkpoints_master/presentation/bloc/checkpoint_list_event.dart';
+import 'package:safecheck_techno/features/admin/renewals_master/data/repositories/renewal_repository_impl.dart';
+import 'package:safecheck_techno/features/admin/renewals_master/domain/usecases/get_renewals.dart';
+import 'package:safecheck_techno/features/admin/renewals_master/presentation/bloc/renewal_list_bloc.dart';
+import 'package:safecheck_techno/features/admin/renewals_master/presentation/bloc/renewal_list_event.dart';
 
 
 
@@ -291,7 +306,13 @@ class RouteHelper {
       GoRoute(
         path: Routes.addCustomer,
         builder: (context, state) => BlocProvider(
-          create: (_) => CustomerFormBloc(),
+          create: (_) {
+            final repo = CustomerRepositoryImpl(CustomerRemoteDataSourceImpl(Dio()));
+            return CustomerFormBloc(
+              addCustomer: AddCustomer(repo),
+              updateCustomer: UpdateCustomer(repo),
+            );
+          },
           child: const AddCustomerScreen(),
         ),
       ),
@@ -302,7 +323,13 @@ class RouteHelper {
       GoRoute(
         path: Routes.addSite,
         builder: (context, state) => BlocProvider(
-          create: (_) => SiteFormBloc(),
+          create: (_) {
+            final repo = SiteRepositoryImpl(SiteRemoteDataSourceImpl(Dio()));
+            return SiteFormBloc(
+              addSite: AddSite(repo),
+              updateSite: UpdateSite(repo),
+            );
+          },
           child: const AddSiteScreen(),
         ),
       ),
@@ -325,7 +352,13 @@ class RouteHelper {
       GoRoute(
         path: Routes.addEquipment,
         builder: (context, state) => BlocProvider(
-          create: (_) => EquipmentFormBloc(),
+          create: (_) {
+            final repo = EquipmentRepositoryImpl(EquipmentRemoteDataSourceImpl(Dio()));
+            return EquipmentFormBloc(
+              addEquipment: AddEquipment(repo),
+              updateEquipment: UpdateEquipment(repo),
+            );
+          },
           child: const AddEquipmentScreen(),
         ),
       ),
@@ -387,7 +420,13 @@ class RouteHelper {
       ),
       GoRoute(
         path: Routes.checkpoints,
-        builder: (context, state) => const CheckpointsListScreen(),
+        builder: (context, state) => BlocProvider(
+          create: (_) {
+            final repo = CheckpointRepositoryImpl(CheckpointRemoteDataSourceImpl(Dio()));
+            return CheckpointListBloc(getCheckpoints: GetCheckpoints(repo))..add(LoadCheckpointList());
+          },
+          child: const CheckpointsListScreen(),
+        ),
       ),
       GoRoute(
         path: Routes.addCheckpoint,
@@ -399,7 +438,13 @@ class RouteHelper {
       ),
       GoRoute(
         path: Routes.renewalsMaster,
-        builder: (context, state) => const RenewalsMasterScreen(),
+        builder: (context, state) => BlocProvider(
+          create: (_) {
+            final repo = RenewalRepositoryImpl();
+            return RenewalListBloc(getRenewals: GetRenewals(repo))..add(LoadRenewalList());
+          },
+          child: const RenewalsMasterScreen(),
+        ),
       ),
       GoRoute(
         path: Routes.reportsMaster,

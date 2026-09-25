@@ -1,9 +1,17 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:safecheck_techno/features/admin/equipment_management/domain/usecases/add_equipment.dart';
+import 'package:safecheck_techno/features/admin/equipment_management/domain/usecases/update_equipment.dart';
 import 'package:safecheck_techno/features/admin/equipment_management/presentation/bloc/equipment_form_event.dart';
 import 'package:safecheck_techno/features/admin/equipment_management/presentation/bloc/equipment_form_state.dart';
 
 class EquipmentFormBloc extends Bloc<EquipmentFormEvent, EquipmentFormState> {
-  EquipmentFormBloc() : super(EquipmentFormInitial()) {
+  final AddEquipment addEquipment;
+  final UpdateEquipment updateEquipment;
+
+  EquipmentFormBloc({
+    required this.addEquipment,
+    required this.updateEquipment,
+  }) : super(EquipmentFormInitial()) {
     on<LoadEquipmentForEdit>(_onLoadForEdit);
     on<SaveEquipment>(_onSaveEquipment);
   }
@@ -15,9 +23,17 @@ class EquipmentFormBloc extends Bloc<EquipmentFormEvent, EquipmentFormState> {
   Future<void> _onSaveEquipment(SaveEquipment event, Emitter<EquipmentFormState> emit) async {
     emit(EquipmentFormLoading());
     try {
-      // TODO: Inject and call AddEquipmentUseCase or UpdateEquipmentUseCase
-      await Future.delayed(const Duration(seconds: 1));
-      emit(const EquipmentFormSuccess('Equipment saved successfully'));
+      final isEdit = event.equipment.id.isNotEmpty;
+      final result = isEdit
+          ? await updateEquipment(event.equipment)
+          : await addEquipment(event.equipment);
+
+      result.fold(
+        (failure) => emit(EquipmentFormError(failure.message)),
+        (_) => emit(EquipmentFormSuccess(
+          isEdit ? 'Equipment updated successfully' : 'Equipment added successfully',
+        )),
+      );
     } catch (e) {
       emit(EquipmentFormError(e.toString()));
     }
