@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,8 +24,7 @@ class _CustomerListScreenState extends State<CustomerListScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Manage Customers',
+        title: Text(AppStrings.manageCustomers,
           style: TextStyle(
             color: AppColors.textPrimaryLight,
             fontWeight: FontWeight.w700,
@@ -58,7 +58,7 @@ class _CustomerListScreenState extends State<CustomerListScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'Search customer name, email...',
+                      hintText: AppStrings.searchCustomerNameEmail,
                       prefixIcon: const Icon(Icons.search, color: Colors.grey),
                       filled: true,
                       fillColor: AppColors.backgroundLight,
@@ -105,8 +105,7 @@ class _CustomerListScreenState extends State<CustomerListScreen> {
         },
         backgroundColor: AppColors.primary,
         icon: const Icon(Icons.add, color: Colors.white),
-        label: const Text(
-          'Add Customer',
+        label: Text(AppStrings.addCustomer,
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),

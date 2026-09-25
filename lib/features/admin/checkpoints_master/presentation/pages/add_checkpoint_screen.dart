@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
 import 'package:safecheck_techno/core/widgets/custom_button.dart';
@@ -28,8 +29,7 @@ class _AddCheckpointScreenState extends State<AddCheckpointScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Add New Parameter',
+        title: Text(AppStrings.addNewParameter,
           style: TextStyle(color: AppColors.primary, fontWeight: FontWeight.bold),
         ),
         iconTheme: const IconThemeData(color: Colors.black87),
@@ -49,8 +49,7 @@ class _AddCheckpointScreenState extends State<AddCheckpointScreen> {
               const SizedBox(height: 24),
               _buildSectionTitle('Input Configuration'),
               
-              Text(
-                'Data Input Type',
+              Text(AppStrings.dataInputType,
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
@@ -100,7 +99,7 @@ class _AddCheckpointScreenState extends State<AddCheckpointScreen> {
                     activeColor: AppColors.primary,
                   ),
                   const Expanded(
-                    child: Text('This is a mandatory checkpoint'),
+                    child: Text(AppStrings.thisIsAMandatoryCheckpoint),
                   ),
                 ],
               ),
@@ -112,7 +111,7 @@ class _AddCheckpointScreenState extends State<AddCheckpointScreen> {
                     activeColor: AppColors.primary,
                   ),
                   const Expanded(
-                    child: Text('Requires photo upload if marked as FAIL'),
+                    child: Text(AppStrings.requiresPhotoUploadIfMarked),
                   ),
                 ],
               ),

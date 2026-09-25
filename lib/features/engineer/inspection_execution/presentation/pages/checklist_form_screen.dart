@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
 
@@ -26,7 +27,7 @@ class _ChecklistFormScreenState extends State<ChecklistFormScreen> {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Inspection Form', style: TextStyle(color: Colors.white, fontSize: 16)),
+            Text(AppStrings.inspectionForm, style: TextStyle(color: Colors.white, fontSize: 16)),
             Text(
               'Equipment: ${widget.equipmentId}',
               style: const TextStyle(color: Colors.white70, fontSize: 12),
@@ -78,7 +79,7 @@ class _ChecklistFormScreenState extends State<ChecklistFormScreen> {
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                       ),
-                      child: const Text('Back'),
+                      child: Text(AppStrings.back),
                     ),
                   ),
                 ],
@@ -88,19 +89,19 @@ class _ChecklistFormScreenState extends State<ChecklistFormScreen> {
         },
         steps: [
           Step(
-            title: const Text('Visual Inspection', style: TextStyle(fontWeight: FontWeight.bold)),
+            title: Text(AppStrings.visualInspection, style: TextStyle(fontWeight: FontWeight.bold)),
             content: _buildTestItem('Hooks & Latches condition'),
             isActive: _currentStep >= 0,
             state: _currentStep > 0 ? StepState.complete : StepState.indexed,
           ),
           Step(
-            title: const Text('Load Testing', style: TextStyle(fontWeight: FontWeight.bold)),
+            title: Text(AppStrings.loadTesting, style: TextStyle(fontWeight: FontWeight.bold)),
             content: _buildTestItem('SWL (Safe Working Load) Limit Test'),
             isActive: _currentStep >= 1,
             state: _currentStep > 1 ? StepState.complete : StepState.indexed,
           ),
           Step(
-            title: const Text('Final Remarks & Signature', style: TextStyle(fontWeight: FontWeight.bold)),
+            title: Text(AppStrings.finalRemarksSignature, style: TextStyle(fontWeight: FontWeight.bold)),
             content: Column(
               children: [
                 const TextField(
@@ -120,7 +121,7 @@ class _ChecklistFormScreenState extends State<ChecklistFormScreen> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: const Center(
-                    child: Text('Draw Signature Here', style: TextStyle(color: Colors.grey)),
+                    child: Text(AppStrings.drawSignatureHere, style: TextStyle(color: Colors.grey)),
                   ),
                 ),
               ],
@@ -150,7 +151,7 @@ class _ChecklistFormScreenState extends State<ChecklistFormScreen> {
               children: [
                 Expanded(
                   child: RadioListTile<String>(
-                    title: const Text('Pass', style: TextStyle(color: Colors.green)),
+                    title: Text(AppStrings.pass, style: TextStyle(color: Colors.green)),
                     value: 'Pass',
                     groupValue: 'Pass', // Mock selected
                     onChanged: (val) {},
@@ -159,7 +160,7 @@ class _ChecklistFormScreenState extends State<ChecklistFormScreen> {
                 ),
                 Expanded(
                   child: RadioListTile<String>(
-                    title: const Text('Fail', style: TextStyle(color: Colors.red)),
+                    title: Text(AppStrings.fail, style: TextStyle(color: Colors.red)),
                     value: 'Fail',
                     groupValue: 'Pass',
                     onChanged: (val) {},
@@ -172,7 +173,7 @@ class _ChecklistFormScreenState extends State<ChecklistFormScreen> {
             TextButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.camera_alt),
-              label: const Text('Upload Evidence Photo'),
+              label: Text(AppStrings.uploadEvidencePhoto),
             ),
           ],
         ),
@@ -191,13 +192,11 @@ class _ChecklistFormScreenState extends State<ChecklistFormScreen> {
           children: [
             const Icon(Icons.check_circle, color: Colors.green, size: 64),
             const SizedBox(height: 16),
-            const Text(
-              'Inspection Completed!',
+            Text(AppStrings.inspectionCompleted,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            const Text(
-              'Certificate has been generated and queued for syncing.',
+            Text(AppStrings.certificateHasBeenGeneratedAnd,
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.grey),
             ),
@@ -214,7 +213,7 @@ class _ChecklistFormScreenState extends State<ChecklistFormScreen> {
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 12),
                 ),
-                child: const Text('Back to Dashboard'),
+                child: Text(AppStrings.backToDashboard),
               ),
             ),
           ],

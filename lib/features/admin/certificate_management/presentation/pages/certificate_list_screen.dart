@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -17,8 +18,7 @@ class CertificateListScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Manage Certificates',
+        title: Text(AppStrings.manageCertificates,
           style: TextStyle(
             color: AppColors.textPrimaryLight,
             fontWeight: FontWeight.w700,
@@ -48,7 +48,7 @@ class CertificateListScreen extends StatelessWidget {
                     Expanded(
                       child: TextField(
                         decoration: InputDecoration(
-                          hintText: 'Search by equipment or ID...',
+                          hintText: AppStrings.searchByEquipmentOrId,
                           prefixIcon: const Icon(Icons.search, color: Colors.grey),
                           contentPadding: const EdgeInsets.symmetric(horizontal: 16),
                           filled: true,

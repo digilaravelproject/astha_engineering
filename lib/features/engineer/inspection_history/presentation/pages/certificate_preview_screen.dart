@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
 
@@ -11,8 +12,7 @@ class CertificatePreviewScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Certificate Preview',
+        title: Text(AppStrings.certificatePreview,
           style: TextStyle(
             color: AppColors.textPrimaryLight,
             fontWeight: FontWeight.bold,
@@ -68,7 +68,7 @@ class CertificatePreviewScreen extends StatelessWidget {
             ElevatedButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.send),
-              label: const Text('Send to Customer Email'),
+              label: Text(AppStrings.sendToCustomerEmail),
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primary,
                 foregroundColor: Colors.white,

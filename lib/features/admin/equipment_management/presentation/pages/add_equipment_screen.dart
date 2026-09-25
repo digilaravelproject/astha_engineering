@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -149,13 +150,13 @@ class _AddEquipmentScreenState extends State<AddEquipmentScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  _buildLabel('Select Site / Location *'),
+                  _buildLabel(AppStrings.selectSiteLocation),
                   DropdownButtonFormField<String>(
                     value: _selectedSite,
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.location_on, color: Colors.grey),
                       filled: true,
-                      fillColor: const Color(0xFFF9FAFB),
+                      fillColor: AppColors.inputFillColor,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.grey.shade200)),
                       enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.grey.shade200)),
                     ),
@@ -163,23 +164,23 @@ class _AddEquipmentScreenState extends State<AddEquipmentScreen> {
                     onChanged: (val) => setState(() => _selectedSite = val ?? _dummySites.first),
                     validator: (val) => val == null || val.isEmpty ? 'Please select a site' : null,
                   ),
-                  _buildLabel('Equipment Name *'),
-                  CustomTextField(controller: _nameController, hintText: 'E.g., Chain Pulley Block', prefixIcon: Icons.precision_manufacturing_outlined, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
-                  _buildLabel('Equipment Short Name *'),
-                  CustomTextField(controller: _shortNameController, hintText: 'E.g., CPB', prefixIcon: Icons.short_text, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
-                  _buildLabel('Manufacturer / Make *'),
-                  CustomTextField(controller: _makeController, hintText: 'E.g., Demag', prefixIcon: Icons.factory_outlined, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
-                  _buildLabel('Model *'),
-                  CustomTextField(controller: _modelController, hintText: 'Model Number', prefixIcon: Icons.model_training, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
+                  _buildLabel(AppStrings.equipmentName),
+                  CustomTextField(controller: _nameController, hintText: AppStrings.egChainPulleyBlock, prefixIcon: Icons.precision_manufacturing_outlined, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
+                  _buildLabel(AppStrings.equipmentShortName),
+                  CustomTextField(controller: _shortNameController, hintText: AppStrings.egCpb, prefixIcon: Icons.short_text, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
+                  _buildLabel(AppStrings.manufacturerMake),
+                  CustomTextField(controller: _makeController, hintText: AppStrings.egDemag, prefixIcon: Icons.factory_outlined, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
+                  _buildLabel(AppStrings.model),
+                  CustomTextField(controller: _modelController, hintText: AppStrings.modelNumber, prefixIcon: Icons.model_training, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
                   Row(
                     children: [
                       Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        _buildLabel('Serial Number *'),
+                        _buildLabel(AppStrings.serialNumber),
                         CustomTextField(controller: _serialController, hintText: 'SN-12345', prefixIcon: Icons.numbers, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
                       ])),
                       const SizedBox(width: 16),
                       Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        _buildLabel('Equipment No. *'),
+                        _buildLabel(AppStrings.equipmentNo),
                         CustomTextField(controller: _equipmentNumberController, hintText: 'EQ-001', prefixIcon: Icons.tag, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
                       ])),
                     ],
@@ -187,27 +188,27 @@ class _AddEquipmentScreenState extends State<AddEquipmentScreen> {
                   Row(
                     children: [
                       Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        _buildLabel('Rated Capacity *'),
-                        CustomTextField(controller: _ratedCapacityController, hintText: 'Value', prefixIcon: Icons.scale, keyboardType: TextInputType.number, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
+                        _buildLabel(AppStrings.ratedCapacity),
+                        CustomTextField(controller: _ratedCapacityController, hintText: AppStrings.value, prefixIcon: Icons.scale, keyboardType: TextInputType.number, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
                       ])),
                       const SizedBox(width: 16),
                       Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        _buildLabel('SWL / Capacity *'),
-                        CustomTextField(controller: _swlCapacityController, hintText: 'Value', prefixIcon: Icons.monitor_weight_outlined, keyboardType: TextInputType.number, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
+                        _buildLabel(AppStrings.swlCapacity),
+                        CustomTextField(controller: _swlCapacityController, hintText: AppStrings.value, prefixIcon: Icons.monitor_weight_outlined, keyboardType: TextInputType.number, validator: (val) => val == null || val.isEmpty ? 'Required' : null),
                       ])),
                     ],
                   ),
-                  _buildLabel('Description'),
-                  CustomTextField(controller: _descriptionController, hintText: 'Optional', prefixIcon: Icons.description_outlined, maxLines: 2),
-                  _buildLabel('Remarks'),
-                  CustomTextField(controller: _remarksController, hintText: 'Optional', prefixIcon: Icons.comment_outlined, maxLines: 2),
-                  _buildLabel('Status *'),
+                  _buildLabel(AppStrings.description),
+                  CustomTextField(controller: _descriptionController, hintText: AppStrings.optional, prefixIcon: Icons.description_outlined, maxLines: 2),
+                  _buildLabel(AppStrings.remarks),
+                  CustomTextField(controller: _remarksController, hintText: AppStrings.optional, prefixIcon: Icons.comment_outlined, maxLines: 2),
+                  _buildLabel(AppStrings.status),
                   DropdownButtonFormField<String>(
                     value: _selectedStatus,
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.toggle_on_outlined, color: Colors.grey),
                       filled: true,
-                      fillColor: const Color(0xFFF9FAFB),
+                      fillColor: AppColors.inputFillColor,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.grey.shade200)),
                       enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.grey.shade200)),
                     ),

@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
@@ -28,10 +29,10 @@ class EngineerMainLayoutScreen extends StatelessWidget {
         currentIndex: navigationShell.currentIndex,
         onTap: _goBranch,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.dashboard), label: 'Dashboard'),
-          BottomNavigationBarItem(icon: Icon(Icons.location_on), label: 'Sites'),
-          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: 'Inspections'),
-          BottomNavigationBarItem(icon: Icon(Icons.more_horiz), label: 'More'),
+          BottomNavigationBarItem(icon: Icon(Icons.dashboard), label: AppStrings.dashboard),
+          BottomNavigationBarItem(icon: Icon(Icons.location_on), label: AppStrings.sites),
+          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: AppStrings.inspections),
+          BottomNavigationBarItem(icon: Icon(Icons.more_horiz), label: AppStrings.more),
         ],
       ),
     );

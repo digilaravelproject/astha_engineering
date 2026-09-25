@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
 import 'package:safecheck_techno/core/widgets/custom_button.dart';
@@ -12,8 +13,7 @@ class CertificateConfiguratorScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Certificate Configurator',
+        title: Text(AppStrings.certificateConfigurator,
           style: TextStyle(
             color: AppColors.primary,
             fontWeight: FontWeight.bold,
@@ -26,8 +26,7 @@ class CertificateConfiguratorScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Customize the PDF output for certificates.',
+            Text(AppStrings.customizeThePdfOutputFor,
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.black54,
@@ -111,7 +110,7 @@ class CertificateConfiguratorScreen extends StatelessWidget {
               child: TextButton.icon(
                 onPressed: () {},
                 icon: const Icon(Icons.visibility),
-                label: const Text('Preview PDF Layout'),
+                label: Text(AppStrings.previewPdfLayout),
                 style: TextButton.styleFrom(
                   foregroundColor: AppColors.primary,
                 ),

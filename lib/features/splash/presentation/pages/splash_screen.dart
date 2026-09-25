@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/constants/app_constants.dart';
@@ -84,8 +85,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.end, // Align 'Techno' to the right of 'SafeCheck'
                     children: [
-                      Text(
-                        'SafeCheck',
+                      Text(AppStrings.safecheck,
                         style: TextStyle(
                           fontSize: 52,
                           fontWeight: FontWeight.w900,
@@ -94,8 +94,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                           height: 1.0,
                         ),
                       ),
-                      Text(
-                        'Techno',
+                      Text(AppStrings.techno,
                         style: TextStyle(
                           fontSize: 36,
                           fontWeight: FontWeight.w300,

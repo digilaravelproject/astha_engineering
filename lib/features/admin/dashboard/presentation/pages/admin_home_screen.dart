@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -30,8 +31,7 @@ class _AdminHomeScreenState extends State<AdminHomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'SafeCheck Techno',
+        title: Text(AppStrings.safecheckTechno,
           style: TextStyle(
             color: AppColors.primary,
             fontWeight: FontWeight.w800,
@@ -65,8 +65,7 @@ class _AdminHomeScreenState extends State<AdminHomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Dashboard Overview',
+                  Text(AppStrings.dashboardOverview,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -138,8 +137,7 @@ class _AdminHomeScreenState extends State<AdminHomeScreen> {
                     ],
                   ),
                   const SizedBox(height: 24),
-                  const Text(
-                    'Recent Feed',
+                  Text(AppStrings.recentFeed,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,

@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
@@ -13,8 +14,7 @@ class CustomerDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Customer Details',
+        title: Text(AppStrings.customerDetails,
           style: TextStyle(
             color: AppColors.textPrimaryLight,
             fontWeight: FontWeight.w700,
@@ -54,8 +54,7 @@ class CustomerDetailsScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 16),
-                  const Text(
-                    'Tech Innovations Pvt. Ltd',
+                  Text(AppStrings.techInnovationsPvtLtd,
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
@@ -68,7 +67,7 @@ class CustomerDetailsScreen extends StatelessWidget {
                     children: [
                       Icon(Icons.email, size: 14, color: Colors.grey),
                       SizedBox(width: 6),
-                      Text('contact@techinnovations.com', style: TextStyle(color: Colors.grey)),
+                      Text(AppStrings.contacttechinnovationscom, style: TextStyle(color: Colors.grey)),
                     ],
                   ),
                   const SizedBox(height: 4),
@@ -92,8 +91,7 @@ class CustomerDetailsScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    'Associated Sites',
+                  Text(AppStrings.associatedSites,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -105,8 +103,7 @@ class CustomerDetailsScreen extends StatelessWidget {
                       context.push(Routes.addSite);
                     },
                     icon: const Icon(Icons.add, size: 18, color: AppColors.primary),
-                    label: const Text(
-                      'Add Site',
+                    label: Text(AppStrings.addSite,
                       style: TextStyle(color: AppColors.primary, fontWeight: FontWeight.bold),
                     ),
                   ),

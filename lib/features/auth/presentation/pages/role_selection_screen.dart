@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/constants/app_constants.dart';
@@ -20,8 +21,7 @@ class RoleSelectionScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Text(
-                  'Select Role to Test',
+                Text(AppStrings.selectRoleToTest,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 28,
@@ -30,8 +30,7 @@ class RoleSelectionScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 12),
-                const Text(
-                  'This screen is for development purposes to easily switch between different app interfaces.',
+                Text(AppStrings.thisScreenIsForDevelopment,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 14,

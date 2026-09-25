@@ -166,8 +166,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                           const SizedBox(width: 8),
-                          const Text(
-                            'Remember me',
+                          Text(AppStrings.rememberMe,
                             style: TextStyle(color: Colors.black87, fontSize: 13),
                           ),
                         ],
@@ -226,7 +225,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: () {
                       context.push(Routes.emailLogin);
                     },
-                    icon: const Icon(Icons.email_outlined, color: Color(0xFF2C7D73)),
+                    icon: const Icon(Icons.email_outlined, color: AppColors.primaryDark),
                     label: const Text(
                       AppStrings.continueWithEmail,
                       style: TextStyle(color: Colors.black87, fontWeight: FontWeight.w600),

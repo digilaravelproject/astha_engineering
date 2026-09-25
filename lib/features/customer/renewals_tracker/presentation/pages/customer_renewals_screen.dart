@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
 import 'package:safecheck_techno/core/widgets/custom_button.dart';
@@ -12,8 +13,7 @@ class CustomerRenewalsScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Renewals & Requests',
+        title: Text(AppStrings.renewalsRequests,
           style: TextStyle(
             color: AppColors.primary,
             fontWeight: FontWeight.bold,
@@ -141,8 +141,7 @@ class CustomerRenewalsScreen extends StatelessWidget {
                   children: [
                     Icon(Icons.check_circle, color: Colors.green, size: 20),
                     SizedBox(width: 8),
-                    Text(
-                      'Our team will contact you shortly.',
+                    Text(AppStrings.ourTeamWillContactYou,
                       style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
                     ),
                   ],
@@ -177,8 +176,7 @@ class CustomerRenewalsScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Request Inspection',
+            Text(AppStrings.requestInspection,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -194,7 +192,7 @@ class CustomerRenewalsScreen extends StatelessWidget {
             TextField(
               maxLines: 3,
               decoration: InputDecoration(
-                hintText: 'Any specific preferred date or notes? (Optional)',
+                hintText: AppStrings.anySpecificPreferredDateOr,
                 filled: true,
                 fillColor: AppColors.backgroundLight,
                 border: OutlineInputBorder(
@@ -209,7 +207,7 @@ class CustomerRenewalsScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Re-inspection request submitted successfully!')),
+                  const SnackBar(content: Text(AppStrings.reinspectionRequestSubmittedSuccessfully)),
                 );
               },
             ),

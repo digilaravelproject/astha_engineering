@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:safecheck_techno/core/theme/bloc/theme_bloc.dart';
+import 'package:safecheck_techno/core/theme/bloc/theme_state.dart';
 
 import 'package:safecheck_techno/core/services/storage/hive_storage.dart';
 import 'package:safecheck_techno/core/services/storage/shared_prefs.dart';
@@ -23,13 +26,20 @@ class SafeCheckApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'SafeCheck Techno',
-      debugShowCheckedModeBanner: false,
-      theme: getLightTheme(),
-      darkTheme: getDarkTheme(),
-      themeMode: ThemeMode.system, // Later manage via ThemeBloc
-      routerConfig: RouteHelper.router,
+    return BlocProvider(
+      create: (context) => ThemeBloc(),
+      child: BlocBuilder<ThemeBloc, ThemeState>(
+        builder: (context, state) {
+          return MaterialApp.router(
+            title: 'SafeCheck Techno',
+            debugShowCheckedModeBanner: false,
+            theme: getLightTheme(),
+            darkTheme: getDarkTheme(),
+            themeMode: state.themeMode,
+            routerConfig: RouteHelper.router,
+          );
+        },
+      ),
     );
   }
 }

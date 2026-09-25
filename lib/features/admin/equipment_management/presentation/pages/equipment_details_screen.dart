@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
@@ -13,8 +14,7 @@ class EquipmentDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Equipment Details',
+        title: Text(AppStrings.equipmentDetails,
           style: TextStyle(
             color: AppColors.textPrimaryLight,
             fontWeight: FontWeight.w700,
@@ -56,7 +56,7 @@ class EquipmentDetailsScreen extends StatelessWidget {
                     children: [
                       Icon(Icons.location_city, size: 16, color: Colors.grey),
                       SizedBox(width: 8),
-                      Text('Make: Demag Model X', style: TextStyle(color: Colors.black87)),
+                      Text(AppStrings.makeDemagModelX, style: TextStyle(color: Colors.black87)),
                     ],
                   ),
                   const SizedBox(height: 4),
@@ -80,7 +80,7 @@ class EquipmentDetailsScreen extends StatelessWidget {
                           child: const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Status', style: TextStyle(fontSize: 12, color: Colors.black54)),
+                              Text(AppStrings.status1, style: TextStyle(fontSize: 12, color: Colors.black54)),
                               SizedBox(height: 4),
                               Text('Active', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.green)),
                             ],
@@ -98,7 +98,7 @@ class EquipmentDetailsScreen extends StatelessWidget {
                           child: const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Next Inspection', style: TextStyle(fontSize: 12, color: Colors.black54)),
+                              Text(AppStrings.nextInspection, style: TextStyle(fontSize: 12, color: Colors.black54)),
                               SizedBox(height: 4),
                               Text('12 Oct 2026', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.orange)),
                             ],
@@ -119,8 +119,7 @@ class EquipmentDetailsScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    'Recent Certificates',
+                  Text(AppStrings.recentCertificates,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -131,7 +130,7 @@ class EquipmentDetailsScreen extends StatelessWidget {
                     onPressed: () {
                       context.push(Routes.manageCertificates);
                     },
-                    child: const Text('View All', style: TextStyle(color: AppColors.primary)),
+                    child: Text(AppStrings.viewAll, style: TextStyle(color: AppColors.primary)),
                   ),
                 ],
               ),

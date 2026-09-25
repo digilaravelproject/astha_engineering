@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -178,71 +179,71 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  _buildLabel('Company Name *'),
+                  _buildLabel(AppStrings.companyName),
                   CustomTextField(
                     controller: _companyController,
-                    hintText: 'Enter company or organization name',
+                    hintText: AppStrings.enterCompanyOrOrganizationName,
                     prefixIcon: Icons.business,
                     validator: Validators.validateName,
                   ),
 
-                  _buildLabel('Contact Person Name *'),
+                  _buildLabel(AppStrings.contactPersonName),
                   CustomTextField(
                     controller: _contactPersonController,
-                    hintText: 'Enter main contact person',
+                    hintText: AppStrings.enterMainContactPerson,
                     prefixIcon: Icons.person_outline,
                     validator: Validators.validateName,
                   ),
 
-                  _buildLabel('Email Address *'),
+                  _buildLabel(AppStrings.emailAddress),
                   CustomTextField(
                     controller: _emailController,
-                    hintText: 'Enter email address',
+                    hintText: AppStrings.enterEmailAddress,
                     prefixIcon: Icons.email_outlined,
                     keyboardType: TextInputType.emailAddress,
                     validator: Validators.validateEmail,
                   ),
 
-                  _buildLabel('Mobile Number *'),
+                  _buildLabel(AppStrings.mobileNumber),
                   CustomTextField(
                     controller: _phoneController,
-                    hintText: 'Enter mobile number',
+                    hintText: AppStrings.enterMobileNumber,
                     prefixIcon: Icons.phone_outlined,
                     keyboardType: TextInputType.phone,
                     validator: Validators.validatePhone,
                   ),
 
-                  _buildLabel('GST Number (Optional)'),
+                  _buildLabel(AppStrings.gstNumberOptional),
                   CustomTextField(
                     controller: _gstController,
-                    hintText: 'Enter GST number',
+                    hintText: AppStrings.enterGstNumber,
                     prefixIcon: Icons.receipt_long_outlined,
                   ),
 
-                  _buildLabel('Billing Address *'),
+                  _buildLabel(AppStrings.billingAddress),
                   CustomTextField(
                     controller: _addressController,
-                    hintText: 'Enter full billing address',
+                    hintText: AppStrings.enterFullBillingAddress,
                     prefixIcon: Icons.location_on_outlined,
                     maxLines: 3,
                     validator: (val) => val == null || val.isEmpty ? 'Address is required' : null,
                   ),
 
-                  _buildLabel('Pincode (Optional)'),
+                  _buildLabel(AppStrings.pincodeOptional),
                   CustomTextField(
                     controller: _pincodeController,
-                    hintText: 'Enter Pincode',
+                    hintText: AppStrings.enterPincode,
                     prefixIcon: Icons.pin_drop_outlined,
                     keyboardType: TextInputType.number,
                   ),
 
-                  _buildLabel('Status *'),
+                  _buildLabel(AppStrings.status),
                   DropdownButtonFormField<String>(
                     value: _selectedStatus,
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.toggle_on_outlined, color: Colors.grey),
                       filled: true,
-                      fillColor: const Color(0xFFF9FAFB),
+                      fillColor: AppColors.inputFillColor,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(color: Colors.grey.shade200),

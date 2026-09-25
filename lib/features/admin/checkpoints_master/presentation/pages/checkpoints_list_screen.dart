@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
@@ -13,8 +14,7 @@ class CheckpointsListScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Checkpoints Master',
+        title: Text(AppStrings.checkpointsMaster,
           style: TextStyle(
             color: AppColors.primary,
             fontWeight: FontWeight.bold,
@@ -32,7 +32,7 @@ class CheckpointsListScreen extends StatelessWidget {
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'Search parameter or ID...',
+                      hintText: AppStrings.searchParameterOrId,
                       prefixIcon: const Icon(Icons.search, color: Colors.grey),
                       filled: true,
                       fillColor: AppColors.backgroundLight,
@@ -84,7 +84,7 @@ class CheckpointsListScreen extends StatelessWidget {
         },
         backgroundColor: AppColors.primary,
         icon: const Icon(Icons.add, color: Colors.white),
-        label: const Text('Add Parameter', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+        label: Text(AppStrings.addParameter, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
       ),
     );
   }

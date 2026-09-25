@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
 
@@ -11,8 +12,7 @@ class CustomerCertificatesScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'My Certificates',
+        title: Text(AppStrings.myCertificates,
           style: TextStyle(
             color: AppColors.primary,
             fontWeight: FontWeight.w800,

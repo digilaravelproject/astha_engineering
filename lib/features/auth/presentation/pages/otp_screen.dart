@@ -64,7 +64,7 @@ class _OtpScreenState extends State<OtpScreen> {
       height: 60,
       textStyle: const TextStyle(fontSize: 32, color: Colors.black, fontWeight: FontWeight.w600),
       decoration: BoxDecoration(
-        color: const Color(0xFFF9FAFB),
+        color: AppColors.inputFillColor,
         border: Border.all(color: AppColors.primary, width: 1.2), // Teal border
         borderRadius: BorderRadius.circular(12),
       ),

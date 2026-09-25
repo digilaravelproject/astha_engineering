@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
@@ -11,7 +12,7 @@ class MoreScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.backgroundLight,
       appBar: AppBar(
-        title: const Text('Master Configurations', style: TextStyle(color: AppColors.textPrimaryLight, fontWeight: FontWeight.bold)),
+        title: Text(AppStrings.masterConfigurations, style: TextStyle(color: AppColors.textPrimaryLight, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.white,
         elevation: 0,
       ),

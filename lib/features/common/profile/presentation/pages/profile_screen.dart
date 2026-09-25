@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/constants/app_constants.dart';
@@ -15,8 +16,7 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Profile & Settings',
+        title: Text(AppStrings.profileSettings,
           style: TextStyle(
             color: AppColors.primary,
             fontWeight: FontWeight.w800,
@@ -42,8 +42,7 @@ class ProfileScreen extends StatelessWidget {
                   child: Icon(Icons.person, size: 40, color: Colors.white),
                 ),
                 const SizedBox(height: 16),
-                const Text(
-                  'John Doe',
+                Text(AppStrings.johnDoe,
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
@@ -59,8 +58,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 4),
-                const Text(
-                  'john.doe@example.com',
+                Text(AppStrings.johndoeexamplecom,
                   style: TextStyle(
                     fontSize: 14,
                     color: Colors.white70,
@@ -72,8 +70,7 @@ class ProfileScreen extends StatelessWidget {
           const SizedBox(height: 24),
 
           // Settings Options
-          const Text(
-            'Preferences',
+          Text(AppStrings.preferences,
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.grey),
           ),
           const SizedBox(height: 8),
@@ -82,8 +79,7 @@ class ProfileScreen extends StatelessWidget {
           _buildSettingsTile(Icons.security, 'Security & Password', null),
           
           const SizedBox(height: 24),
-          const Text(
-            'About',
+          Text(AppStrings.about,
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.grey),
           ),
           const SizedBox(height: 8),
@@ -100,7 +96,7 @@ class ProfileScreen extends StatelessWidget {
                 context.go(Routes.login);
               },
               icon: const Icon(Icons.logout, color: Colors.redAccent),
-              label: const Text('Log Out', style: TextStyle(color: Colors.redAccent)),
+              label: Text(AppStrings.logOut, style: TextStyle(color: Colors.redAccent)),
               style: OutlinedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 side: const BorderSide(color: Colors.redAccent),

@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
@@ -13,8 +14,7 @@ class SiteDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Site Details',
+        title: Text(AppStrings.siteDetails,
           style: TextStyle(
             color: AppColors.textPrimaryLight,
             fontWeight: FontWeight.w700,
@@ -50,7 +50,7 @@ class SiteDetailsScreen extends StatelessWidget {
                     children: [
                       Icon(Icons.business, size: 16, color: Colors.grey),
                       SizedBox(width: 8),
-                      Text('Tech Innovations Pvt. Ltd', style: TextStyle(color: Colors.black87)),
+                      Text(AppStrings.techInnovationsPvtLtd, style: TextStyle(color: Colors.black87)),
                     ],
                   ),
                   const SizedBox(height: 4),
@@ -58,7 +58,7 @@ class SiteDetailsScreen extends StatelessWidget {
                     children: [
                       Icon(Icons.location_on, size: 16, color: Colors.grey),
                       SizedBox(width: 8),
-                      Expanded(child: Text('Block A, Industrial Estate, Pune', style: TextStyle(color: Colors.grey))),
+                      Expanded(child: Text(AppStrings.blockAIndustrialEstatePune, style: TextStyle(color: Colors.grey))),
                     ],
                   ),
                   const SizedBox(height: 16),
@@ -76,7 +76,7 @@ class SiteDetailsScreen extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Site Manager: Mr. Verma', style: TextStyle(fontWeight: FontWeight.bold)),
+                            Text(AppStrings.siteManagerMrVerma, style: TextStyle(fontWeight: FontWeight.bold)),
                             Text('+91 98765 12345', style: TextStyle(fontSize: 12, color: Colors.black54)),
                           ],
                         ),
@@ -95,8 +95,7 @@ class SiteDetailsScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    'Equipment at Site',
+                  Text(AppStrings.equipmentAtSite,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -108,8 +107,7 @@ class SiteDetailsScreen extends StatelessWidget {
                       context.push(Routes.addEquipment);
                     },
                     icon: const Icon(Icons.add, size: 18, color: AppColors.primary),
-                    label: const Text(
-                      'Add Equipment',
+                    label: Text(AppStrings.addEquipment,
                       style: TextStyle(color: AppColors.primary, fontWeight: FontWeight.bold),
                     ),
                   ),

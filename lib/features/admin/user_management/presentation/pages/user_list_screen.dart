@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,8 +34,7 @@ class _UserListScreenState extends State<UserListScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Manage Users',
+        title: Text(AppStrings.manageUsers,
           style: TextStyle(
             color: AppColors.textPrimaryLight,
             fontWeight: FontWeight.w700,
@@ -61,7 +61,7 @@ class _UserListScreenState extends State<UserListScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Search name, email, mobile, ID...',
+                hintText: AppStrings.searchNameEmailMobileId,
                 prefixIcon: const Icon(Icons.search, color: Colors.grey),
                 filled: true,
                 fillColor: AppColors.backgroundLight,
@@ -141,8 +141,7 @@ class _UserListScreenState extends State<UserListScreen> {
         },
         backgroundColor: AppColors.primary,
         icon: const Icon(Icons.add, color: Colors.white),
-        label: const Text(
-          'Add User',
+        label: Text(AppStrings.addUser,
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),

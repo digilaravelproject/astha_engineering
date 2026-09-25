@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
@@ -57,8 +58,7 @@ class _AddUserScreenState extends State<AddUserScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Add New User',
+        title: Text(AppStrings.addNewUser,
           style: TextStyle(
             color: AppColors.textPrimaryLight,
             fontWeight: FontWeight.w700,
@@ -102,46 +102,46 @@ class _AddUserScreenState extends State<AddUserScreen> {
                 ),
                 const SizedBox(height: 24),
                 
-                _buildLabel('Full Name *'),
+                _buildLabel(AppStrings.fullName),
                 CustomTextField(
                   controller: _nameController,
-                  hintText: 'Enter full name',
+                  hintText: AppStrings.enterFullName,
                   prefixIcon: Icons.person_outline,
                   validator: Validators.validateName,
                 ),
                 
-                _buildLabel('Email Address *'),
+                _buildLabel(AppStrings.emailAddress),
                 CustomTextField(
                   controller: _emailController,
-                  hintText: 'Enter email address',
+                  hintText: AppStrings.enterEmailAddress,
                   prefixIcon: Icons.email_outlined,
                   keyboardType: TextInputType.emailAddress,
                   validator: Validators.validateEmail,
                 ),
                 
-                _buildLabel('Mobile Number *'),
+                _buildLabel(AppStrings.mobileNumber),
                 CustomTextField(
                   controller: _mobileController,
-                  hintText: 'Enter mobile number',
+                  hintText: AppStrings.enterMobileNumber,
                   prefixIcon: Icons.phone_outlined,
                   keyboardType: TextInputType.phone,
                   validator: Validators.validatePhone,
                 ),
                 
-                _buildLabel('Employee / Inspector ID'),
+                _buildLabel(AppStrings.employeeInspectorId),
                 CustomTextField(
                   controller: _employeeIdController,
-                  hintText: 'Enter ID (Optional)',
+                  hintText: AppStrings.enterIdOptional,
                   prefixIcon: Icons.badge_outlined,
                 ),
                 
-                _buildLabel('Role *'),
+                _buildLabel(AppStrings.role),
                 DropdownButtonFormField<UserRole>(
                   initialValue: _selectedRole,
                   decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.security, color: Colors.grey),
                     filled: true,
-                    fillColor: const Color(0xFFF9FAFB),
+                    fillColor: AppColors.inputFillColor,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
                       borderSide: BorderSide(color: Colors.grey.shade200),
@@ -170,19 +170,19 @@ class _AddUserScreenState extends State<AddUserScreen> {
                   validator: (value) => value == null ? 'Please select a role' : null,
                 ),
                 
-                _buildLabel('Password *'),
+                _buildLabel(AppStrings.password),
                 CustomTextField(
                   controller: _passwordController,
-                  hintText: 'Enter password',
+                  hintText: AppStrings.enterPassword,
                   prefixIcon: Icons.lock_outline,
                   obscureText: true,
                   validator: Validators.validatePassword,
                 ),
                 
-                _buildLabel('Confirm Password *'),
+                _buildLabel(AppStrings.confirmPassword),
                 CustomTextField(
                   controller: _confirmPasswordController,
-                  hintText: 'Re-enter password',
+                  hintText: AppStrings.reenterPassword,
                   prefixIcon: Icons.lock_outline,
                   obscureText: true,
                   validator: (val) {
@@ -204,8 +204,7 @@ class _AddUserScreenState extends State<AddUserScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
-                        'Account Status',
+                      Text(AppStrings.accountStatus,
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,

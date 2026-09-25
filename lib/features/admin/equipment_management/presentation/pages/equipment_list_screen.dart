@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -18,8 +19,7 @@ class EquipmentListScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Manage Equipment',
+        title: Text(AppStrings.manageEquipment,
           style: TextStyle(
             color: AppColors.textPrimaryLight,
             fontWeight: FontWeight.w700,
@@ -49,7 +49,7 @@ class EquipmentListScreen extends StatelessWidget {
                     Expanded(
                       child: TextField(
                         decoration: InputDecoration(
-                          hintText: 'Search equipment...',
+                          hintText: AppStrings.searchEquipment,
                           prefixIcon: const Icon(Icons.search, color: Colors.grey),
                           contentPadding: const EdgeInsets.symmetric(horizontal: 16),
                           filled: true,
@@ -157,7 +157,7 @@ class EquipmentListScreen extends StatelessWidget {
         },
         backgroundColor: AppColors.primary,
         icon: const Icon(Icons.add, color: Colors.white),
-        label: const Text('Add Equipment', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+        label: Text(AppStrings.addEquipment, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
       ),
     );
   }

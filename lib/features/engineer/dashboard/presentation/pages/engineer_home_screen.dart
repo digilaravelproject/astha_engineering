@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
@@ -15,8 +16,7 @@ class EngineerHomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Inspector Portal',
+        title: Text(AppStrings.inspectorPortal,
           style: TextStyle(
             color: AppColors.primary,
             fontWeight: FontWeight.w800,
@@ -45,8 +45,7 @@ class EngineerHomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'My Tasks Overview',
+            Text(AppStrings.myTasksOverview,
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -96,8 +95,7 @@ class EngineerHomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'Recent Assignments',
+                Text(AppStrings.recentAssignments,
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -106,7 +104,7 @@ class EngineerHomeScreen extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: const Text('View All', style: TextStyle(color: AppColors.primary)),
+                  child: Text(AppStrings.viewAll, style: TextStyle(color: AppColors.primary)),
                 ),
               ],
             ),

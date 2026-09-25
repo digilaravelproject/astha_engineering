@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,8 +19,7 @@ class SiteListScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Manage Sites',
+        title: Text(AppStrings.manageSites,
           style: TextStyle(
             color: AppColors.textPrimaryLight,
             fontWeight: FontWeight.w700,
@@ -46,7 +46,7 @@ class SiteListScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Search site name, location...',
+                hintText: AppStrings.searchSiteNameLocation,
                 prefixIcon: const Icon(Icons.search, color: Colors.grey),
                 filled: true,
                 fillColor: AppColors.backgroundLight,
@@ -89,8 +89,7 @@ class SiteListScreen extends StatelessWidget {
         },
         backgroundColor: AppColors.primary,
         icon: const Icon(Icons.add, color: Colors.white),
-        label: const Text(
-          'Add Site',
+        label: Text(AppStrings.addSite,
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),

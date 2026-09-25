@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
@@ -15,8 +16,7 @@ class CustomerHomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Customer Portal',
+        title: Text(AppStrings.customerPortal,
           style: TextStyle(
             color: AppColors.primary,
             fontWeight: FontWeight.w800,
@@ -45,8 +45,7 @@ class CustomerHomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'My Inventory Overview',
+            Text(AppStrings.myInventoryOverview,
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -98,8 +97,7 @@ class CustomerHomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'Recent Updates',
+                Text(AppStrings.recentUpdates,
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -108,7 +106,7 @@ class CustomerHomeScreen extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: const Text('View All', style: TextStyle(color: AppColors.primary)),
+                  child: Text(AppStrings.viewAll, style: TextStyle(color: AppColors.primary)),
                 ),
               ],
             ),

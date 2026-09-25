@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
 import 'package:safecheck_techno/core/widgets/custom_button.dart';
@@ -12,8 +13,7 @@ class ReportsMasterScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Reports & Analytics',
+        title: Text(AppStrings.reportsAnalytics,
           style: TextStyle(
             color: AppColors.primary,
             fontWeight: FontWeight.bold,
@@ -38,8 +38,7 @@ class ReportsMasterScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Export Custom Report',
+                    Text(AppStrings.exportCustomReport,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -64,8 +63,7 @@ class ReportsMasterScreen extends StatelessWidget {
             const SizedBox(height: 24),
             
             // Stats Grid
-            const Text(
-              'System Analytics',
+            Text(AppStrings.systemAnalytics,
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,

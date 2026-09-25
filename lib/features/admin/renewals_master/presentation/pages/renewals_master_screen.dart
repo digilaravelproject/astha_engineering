@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
 
@@ -13,8 +14,7 @@ class RenewalsMasterScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
-          title: const Text(
-            'Renewals Master',
+          title: Text(AppStrings.renewalsMaster,
             style: TextStyle(
               color: AppColors.primary,
               fontWeight: FontWeight.bold,
@@ -135,7 +135,7 @@ class RenewalsMasterScreen extends StatelessWidget {
                   child: OutlinedButton.icon(
                     onPressed: () {},
                     icon: const Icon(Icons.mail_outline, size: 18),
-                    label: const Text('Send Reminder'),
+                    label: Text(AppStrings.sendReminder),
                     style: OutlinedButton.styleFrom(
                       foregroundColor: AppColors.primary,
                       side: const BorderSide(color: AppColors.primary),
@@ -148,7 +148,7 @@ class RenewalsMasterScreen extends StatelessWidget {
                   child: ElevatedButton.icon(
                     onPressed: () {},
                     icon: const Icon(Icons.add_task, size: 18),
-                    label: const Text('Re-schedule'),
+                    label: Text(AppStrings.reschedule),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.primary,
                       foregroundColor: Colors.white,

@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
@@ -14,8 +15,7 @@ class InspectionScannerScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.white),
-        title: const Text(
-          'Scan Equipment',
+        title: Text(AppStrings.scanEquipment,
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
         ),
       ),
@@ -36,8 +36,7 @@ class InspectionScannerScreen extends StatelessWidget {
                   children: [
                     Icon(Icons.qr_code_scanner, color: Colors.white54, size: 64),
                     SizedBox(height: 16),
-                    Text(
-                      'Align QR Code within frame',
+                    Text(AppStrings.alignQrCodeWithinFrame,
                       style: TextStyle(color: Colors.white70),
                     ),
                   ],
@@ -63,8 +62,7 @@ class InspectionScannerScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const Text(
-                    'Having trouble scanning?',
+                  Text(AppStrings.havingTroubleScanning,
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.black54, fontSize: 14),
                   ),
@@ -74,7 +72,7 @@ class InspectionScannerScreen extends StatelessWidget {
                       _showManualEntryDialog(context);
                     },
                     icon: const Icon(Icons.keyboard),
-                    label: const Text('Enter Equipment ID Manually'),
+                    label: Text(AppStrings.enterEquipmentIdManually),
                     style: OutlinedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -95,7 +93,7 @@ class InspectionScannerScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                     ),
-                    child: const Text('Simulate Scan Success (Dev)'),
+                    child: Text(AppStrings.simulateScanSuccessDev),
                   ),
                 ],
               ),
@@ -110,7 +108,7 @@ class InspectionScannerScreen extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Manual Entry'),
+        title: Text(AppStrings.manualEntry),
         content: const TextField(
           decoration: InputDecoration(
             hintText: 'e.g. CPB-001',
@@ -132,7 +130,7 @@ class InspectionScannerScreen extends StatelessWidget {
               );
             },
             style: ElevatedButton.styleFrom(backgroundColor: AppColors.primary, foregroundColor: Colors.white),
-            child: const Text('Proceed'),
+            child: Text(AppStrings.proceed),
           ),
         ],
       ),

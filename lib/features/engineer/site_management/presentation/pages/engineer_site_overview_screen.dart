@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
@@ -41,7 +42,7 @@ class EngineerSiteOverviewScreen extends StatelessWidget {
         },
         backgroundColor: AppColors.primary,
         icon: const Icon(Icons.qr_code_scanner, color: Colors.white),
-        label: const Text('Scan QR / Barcode', style: TextStyle(color: Colors.white)),
+        label: Text(AppStrings.scanQrBarcode, style: TextStyle(color: Colors.white)),
       ),
     );
   }
@@ -93,7 +94,7 @@ class EngineerSiteOverviewScreen extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Total Equipment', style: TextStyle(color: Colors.white70, fontSize: 12)),
+                    Text(AppStrings.totalEquipment, style: TextStyle(color: Colors.white70, fontSize: 12)),
                     SizedBox(height: 4),
                     Text('12', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
                   ],
@@ -101,7 +102,7 @@ class EngineerSiteOverviewScreen extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Text('Pending Inspection', style: TextStyle(color: Colors.white70, fontSize: 12)),
+                    Text(AppStrings.pendingInspection, style: TextStyle(color: Colors.white70, fontSize: 12)),
                     SizedBox(height: 4),
                     Text('2', style: TextStyle(color: Colors.orangeAccent, fontSize: 18, fontWeight: FontWeight.bold)),
                   ],
@@ -195,7 +196,7 @@ class EngineerSiteOverviewScreen extends StatelessWidget {
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                     ),
-                    child: const Text('Start'),
+                    child: Text(AppStrings.start),
                   )
                 : IconButton(
                     icon: const Icon(Icons.remove_red_eye, color: AppColors.primary),

@@ -1,3 +1,4 @@
+import 'package:safecheck_techno/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
@@ -34,8 +35,7 @@ class _EngineerSiteListScreenState extends State<EngineerSiteListScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Assigned Sites',
+        title: Text(AppStrings.assignedSites,
           style: TextStyle(
             color: AppColors.primary,
             fontWeight: FontWeight.w800,
@@ -48,7 +48,7 @@ class _EngineerSiteListScreenState extends State<EngineerSiteListScreen> {
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Search sites by name or location...',
+                hintText: AppStrings.searchSitesByNameOr,
                 prefixIcon: const Icon(Icons.search, color: Colors.grey),
                 filled: true,
                 fillColor: Colors.grey.shade100,

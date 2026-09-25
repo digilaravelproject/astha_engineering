@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:safecheck_techno/core/theme/app_colors.dart';
 
 class CustomTextField extends StatelessWidget {
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final String hintText;
   final IconData? prefixIcon;
   final IconData? suffixIcon;
@@ -21,7 +21,7 @@ class CustomTextField extends StatelessWidget {
 
   const CustomTextField({
     super.key,
-    required this.controller,
+    this.controller,
     required this.hintText,
     this.prefixIcon,
     this.suffixIcon,
@@ -41,7 +41,7 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final defaultBorderColor = borderColor ?? const Color(0xFFE0E0E0);
+    final defaultBorderColor = borderColor ?? AppColors.borderDefault;
 
     return TextFormField(
       controller: controller,

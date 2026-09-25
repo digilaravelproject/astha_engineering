@@ -246,7 +246,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     onPressed: () {
                       context.push(Routes.emailLogin);
                     },
-                    icon: const Icon(Icons.email_outlined, color: Color(0xFF2C7D73)),
+                    icon: const Icon(Icons.email_outlined, color: AppColors.primaryDark),
                     label: const Text(
                       AppStrings.continueWithEmail,
                       style: TextStyle(color: Colors.black87, fontWeight: FontWeight.w600),
