@@ -1,0 +1,46 @@
+class Routes {
+  static const String splash = '/';
+  static const String login = '/login';
+  static const String adminDashboard = '/adminDashboard';
+  static const String customerDashboard = '/customerDashboard';
+  static const String engineerDashboard = '/engineerDashboard';
+  static const String adminMore = '/adminMore';
+  static const String customerMore = '/customerMore';
+  static const String engineerMore = '/engineerMore';
+  static const String customerSites = '/customerSites';
+  static const String customerCertificates = '/customerCertificates';
+  static const String engineerSites = '/engineerSites';
+  static const String engineerSiteOverview = '/engineerSiteOverview';
+  static const String engineerInspectionScanner = '/engineerInspectionScanner';
+  static const String engineerChecklistForm = '/engineerChecklistForm';
+  static const String engineerInspections = '/engineerInspections';
+  static const String manageUsers = '/manageUsers';
+  static const String addUser = '/addUser';
+  static const String manageCustomers = '/manageCustomers';
+  static const String addCustomer = '/addCustomer';
+  static const String customerDetails = '/customerDetails';
+  static const String manageSites = '/manageSites';
+  static const String addSite = '/addSite';
+  static const String siteDetails = '/siteDetails';
+  static const String manageEquipment = '/manageEquipment';
+  static const String addEquipment = '/addEquipment';
+  static const String equipmentDetails = '/equipmentDetails';
+  static const String manageCertificates = '/manageCertificates';
+
+  static const String signup = '/signup';
+  static const String emailLogin = '/emailLogin';
+  static const String otpVerify = '/otpVerify';
+  static const String forgotPassword = '/forgotPassword';
+  static const String setNewPassword = '/setNewPassword';
+  static const String webview = '/webview';
+  static const String profile = '/profile';
+  static const String roleSelection = '/roleSelection';
+  static const String notifications = '/notifications';
+  static const String checkpoints = '/checkpoints';
+  static const String addCheckpoint = '/addCheckpoint';
+  static const String certificateConfigurator = '/certificateConfigurator';
+  static const String renewalsMaster = '/renewalsMaster';
+  static const String reportsMaster = '/reportsMaster';
+  static const String certificatePreview = '/certificatePreview';
+  static const String customerRenewals = '/customerRenewals';
+}
