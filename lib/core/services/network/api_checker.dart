@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:safecheck_techno/core/services/network/response_model.dart';
-import 'package:safecheck_techno/core/utils/logger.dart';
+import 'package:astha_engineering/core/services/network/response_model.dart';
+import 'package:astha_engineering/core/utils/logger.dart';
 
 class ApiChecker {
   static ResponseModel checkApi(Response response) {

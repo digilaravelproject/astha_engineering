@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/domain/usecases/add_equipment.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/domain/usecases/update_equipment.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/presentation/bloc/equipment_form_event.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/presentation/bloc/equipment_form_state.dart';
+import 'package:astha_engineering/features/admin/equipment_management/domain/usecases/add_equipment.dart';
+import 'package:astha_engineering/features/admin/equipment_management/domain/usecases/update_equipment.dart';
+import 'package:astha_engineering/features/admin/equipment_management/presentation/bloc/equipment_form_event.dart';
+import 'package:astha_engineering/features/admin/equipment_management/presentation/bloc/equipment_form_state.dart';
 
 class EquipmentFormBloc extends Bloc<EquipmentFormEvent, EquipmentFormState> {
   final AddEquipment addEquipment;

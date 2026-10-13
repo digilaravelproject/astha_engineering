@@ -12,6 +12,7 @@ class LabeledTextField extends StatelessWidget {
   final int maxLines;
   final String? Function(String?)? validator;
   final VoidCallback? onSuffixTap;
+  final void Function(String)? onChanged;
 
   const LabeledTextField({
     super.key,
@@ -25,6 +26,7 @@ class LabeledTextField extends StatelessWidget {
     this.maxLines = 1,
     this.validator,
     this.onSuffixTap,
+    this.onChanged,
   });
 
   @override
@@ -32,6 +34,7 @@ class LabeledTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        const SizedBox(height: 16),
         Padding(
           padding: const EdgeInsets.only(bottom: 8.0, left: 4.0),
           child: Text(
@@ -53,6 +56,7 @@ class LabeledTextField extends StatelessWidget {
           maxLines: maxLines,
           validator: validator,
           onSuffixTap: onSuffixTap,
+          onChanged: onChanged,
         ),
         const SizedBox(height: 16),
       ],

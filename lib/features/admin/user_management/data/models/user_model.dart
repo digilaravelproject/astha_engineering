@@ -1,5 +1,5 @@
-import 'package:safecheck_techno/features/admin/user_management/domain/entities/user_entity.dart';
-import 'package:safecheck_techno/core/enums/user_role.dart';
+import 'package:astha_engineering/features/admin/user_management/domain/entities/user_entity.dart';
+import 'package:astha_engineering/core/enums/user_role.dart';
 
 class UserModel extends UserEntity {
   const UserModel({

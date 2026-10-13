@@ -1,5 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:safecheck_techno/core/utils/logger.dart';
+import 'package:astha_engineering/core/utils/logger.dart';
 
 class HiveStorage {
   static const String _defaultBoxName = 'safecheck_box';

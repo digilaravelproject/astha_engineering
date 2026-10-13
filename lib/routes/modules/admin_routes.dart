@@ -1,91 +1,100 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:safecheck_techno/routes/app_routes.dart';
+import 'package:astha_engineering/routes/app_routes.dart';
 
 // Dashboard
-import 'package:safecheck_techno/features/admin/dashboard/presentation/bloc/admin_dashboard_bloc.dart';
-import 'package:safecheck_techno/features/admin/dashboard/presentation/pages/admin_home_screen.dart';
-import 'package:safecheck_techno/features/admin/dashboard/presentation/pages/admin_main_layout_screen.dart';
-import 'package:safecheck_techno/features/admin/dashboard/presentation/pages/more_screen.dart';
+import 'package:astha_engineering/features/admin/dashboard/presentation/bloc/admin_dashboard_bloc.dart';
+import 'package:astha_engineering/features/admin/dashboard/presentation/pages/admin_home_screen.dart';
+import 'package:astha_engineering/features/admin/dashboard/presentation/pages/admin_main_layout_screen.dart';
+import 'package:astha_engineering/features/admin/dashboard/presentation/pages/more_screen.dart';
 
 // User Management
-import 'package:safecheck_techno/features/admin/user_management/data/datasources/user_remote_data_source.dart';
-import 'package:safecheck_techno/features/admin/user_management/data/repositories/user_repository_impl.dart';
-import 'package:safecheck_techno/features/admin/user_management/domain/usecases/get_users.dart';
-import 'package:safecheck_techno/features/admin/user_management/presentation/bloc/user_list_bloc.dart';
-import 'package:safecheck_techno/features/admin/user_management/presentation/bloc/user_list_event.dart';
-import 'package:safecheck_techno/features/admin/user_management/presentation/pages/add_user_screen.dart';
-import 'package:safecheck_techno/features/admin/user_management/presentation/pages/user_list_screen.dart';
+import 'package:astha_engineering/features/admin/user_management/data/datasources/user_remote_data_source.dart';
+import 'package:astha_engineering/features/admin/user_management/data/repositories/user_repository_impl.dart';
+import 'package:astha_engineering/features/admin/user_management/domain/usecases/get_users.dart';
+import 'package:astha_engineering/features/admin/user_management/presentation/bloc/user_list_bloc.dart';
+import 'package:astha_engineering/features/admin/user_management/presentation/bloc/user_list_event.dart';
+import 'package:astha_engineering/features/admin/user_management/presentation/pages/add_user_screen.dart';
+import 'package:astha_engineering/features/admin/user_management/presentation/pages/user_list_screen.dart';
 
 // Customer Management
-import 'package:safecheck_techno/features/admin/customer_management/data/datasources/customer_remote_data_source.dart';
-import 'package:safecheck_techno/features/admin/customer_management/data/repositories/customer_repository_impl.dart';
-import 'package:safecheck_techno/features/admin/customer_management/domain/usecases/add_customer.dart';
-import 'package:safecheck_techno/features/admin/customer_management/domain/usecases/get_customers.dart';
-import 'package:safecheck_techno/features/admin/customer_management/domain/usecases/update_customer.dart';
-import 'package:safecheck_techno/features/admin/customer_management/presentation/bloc/customer_form_bloc.dart';
-import 'package:safecheck_techno/features/admin/customer_management/presentation/bloc/customer_list_bloc.dart';
-import 'package:safecheck_techno/features/admin/customer_management/presentation/bloc/customer_list_event.dart';
-import 'package:safecheck_techno/features/admin/customer_management/presentation/pages/add_customer_screen.dart';
-import 'package:safecheck_techno/features/admin/customer_management/presentation/pages/customer_details_screen.dart';
-import 'package:safecheck_techno/features/admin/customer_management/presentation/pages/customer_list_screen.dart';
+import 'package:astha_engineering/features/admin/customer_management/data/datasources/customer_remote_data_source.dart';
+import 'package:astha_engineering/features/admin/customer_management/data/repositories/customer_repository_impl.dart';
+import 'package:astha_engineering/features/admin/customer_management/domain/usecases/add_customer.dart';
+import 'package:astha_engineering/features/admin/customer_management/domain/usecases/get_customers.dart';
+import 'package:astha_engineering/features/admin/customer_management/domain/usecases/update_customer.dart';
+import 'package:astha_engineering/features/admin/customer_management/presentation/bloc/customer_form_bloc.dart';
+import 'package:astha_engineering/features/admin/customer_management/presentation/bloc/customer_list_bloc.dart';
+import 'package:astha_engineering/features/admin/customer_management/presentation/bloc/customer_list_event.dart';
+import 'package:astha_engineering/features/admin/customer_management/presentation/pages/add_customer_screen.dart';
+import 'package:astha_engineering/features/admin/customer_management/presentation/pages/customer_details_screen.dart';
+import 'package:astha_engineering/features/admin/customer_management/presentation/pages/customer_list_screen.dart';
 
 // Site Management
-import 'package:safecheck_techno/features/admin/site_management/data/datasources/site_remote_data_source.dart';
-import 'package:safecheck_techno/features/admin/site_management/data/repositories/site_repository_impl.dart';
-import 'package:safecheck_techno/features/admin/site_management/domain/usecases/add_site.dart';
-import 'package:safecheck_techno/features/admin/site_management/domain/usecases/get_sites.dart';
-import 'package:safecheck_techno/features/admin/site_management/domain/usecases/update_site.dart';
-import 'package:safecheck_techno/features/admin/site_management/presentation/bloc/site_form_bloc.dart';
-import 'package:safecheck_techno/features/admin/site_management/presentation/bloc/site_list_bloc.dart';
-import 'package:safecheck_techno/features/admin/site_management/presentation/bloc/site_list_event.dart';
-import 'package:safecheck_techno/features/admin/site_management/presentation/pages/add_site_screen.dart';
-import 'package:safecheck_techno/features/admin/site_management/presentation/pages/site_details_screen.dart';
-import 'package:safecheck_techno/features/admin/site_management/presentation/pages/site_list_screen.dart';
+import 'package:astha_engineering/features/admin/site_management/data/datasources/site_remote_data_source.dart';
+import 'package:astha_engineering/features/admin/site_management/data/repositories/site_repository_impl.dart';
+import 'package:astha_engineering/features/admin/site_management/domain/usecases/add_site.dart';
+import 'package:astha_engineering/features/admin/site_management/domain/usecases/get_sites.dart';
+import 'package:astha_engineering/features/admin/site_management/domain/usecases/update_site.dart';
+import 'package:astha_engineering/features/admin/site_management/presentation/bloc/site_form_bloc.dart';
+import 'package:astha_engineering/features/admin/site_management/presentation/bloc/site_list_bloc.dart';
+import 'package:astha_engineering/features/admin/site_management/presentation/bloc/site_list_event.dart';
+import 'package:astha_engineering/features/admin/site_management/presentation/pages/add_site_screen.dart';
+import 'package:astha_engineering/features/admin/site_management/presentation/pages/site_details_screen.dart';
+import 'package:astha_engineering/features/admin/site_management/presentation/pages/site_list_screen.dart';
 
 // Equipment Management
-import 'package:safecheck_techno/features/admin/equipment_management/data/datasources/equipment_remote_data_source.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/data/repositories/equipment_repository_impl.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/domain/usecases/add_equipment.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/domain/usecases/get_equipments.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/domain/usecases/update_equipment.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/presentation/bloc/equipment_form_bloc.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/presentation/bloc/equipment_list_bloc.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/presentation/bloc/equipment_list_event.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/presentation/pages/add_equipment_screen.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/presentation/pages/equipment_details_screen.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/presentation/pages/equipment_list_screen.dart';
+import 'package:astha_engineering/features/admin/equipment_management/data/datasources/equipment_remote_data_source.dart';
+import 'package:astha_engineering/features/admin/equipment_management/data/repositories/equipment_repository_impl.dart';
+import 'package:astha_engineering/features/admin/equipment_management/domain/usecases/add_equipment.dart';
+import 'package:astha_engineering/features/admin/equipment_management/domain/usecases/get_equipments.dart';
+import 'package:astha_engineering/features/admin/equipment_management/domain/usecases/update_equipment.dart';
+import 'package:astha_engineering/features/admin/equipment_management/presentation/bloc/equipment_form_bloc.dart';
+import 'package:astha_engineering/features/admin/equipment_management/presentation/bloc/equipment_list_bloc.dart';
+import 'package:astha_engineering/features/admin/equipment_management/presentation/bloc/equipment_list_event.dart';
+import 'package:astha_engineering/features/admin/equipment_management/presentation/pages/add_equipment_screen.dart';
+import 'package:astha_engineering/features/admin/equipment_management/presentation/pages/equipment_details_screen.dart';
+import 'package:astha_engineering/features/admin/equipment_management/presentation/pages/equipment_list_screen.dart';
 
 // Certificate Management
-import 'package:safecheck_techno/features/admin/certificate_management/data/datasources/certificate_remote_data_source.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/data/repositories/certificate_repository_impl.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/domain/usecases/get_certificates.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/presentation/bloc/certificate_list_bloc.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/presentation/bloc/certificate_list_event.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/presentation/pages/certificate_list_screen.dart';
+import 'package:astha_engineering/features/admin/certificate_management/data/datasources/certificate_remote_data_source.dart';
+import 'package:astha_engineering/features/admin/certificate_management/data/repositories/certificate_repository_impl.dart';
+import 'package:astha_engineering/features/admin/certificate_management/domain/usecases/get_certificates.dart';
+import 'package:astha_engineering/features/admin/certificate_management/presentation/bloc/certificate_list_bloc.dart';
+import 'package:astha_engineering/features/admin/certificate_management/presentation/bloc/certificate_list_event.dart';
+import 'package:astha_engineering/features/admin/certificate_management/presentation/pages/certificate_list_screen.dart';
 
 // Checkpoints Master
-import 'package:safecheck_techno/features/admin/checkpoints_master/data/datasources/checkpoint_remote_data_source.dart';
-import 'package:safecheck_techno/features/admin/checkpoints_master/data/repositories/checkpoint_repository_impl.dart';
-import 'package:safecheck_techno/features/admin/checkpoints_master/domain/usecases/get_checkpoints.dart';
-import 'package:safecheck_techno/features/admin/checkpoints_master/presentation/bloc/checkpoint_list_bloc.dart';
-import 'package:safecheck_techno/features/admin/checkpoints_master/presentation/bloc/checkpoint_list_event.dart';
-import 'package:safecheck_techno/features/admin/checkpoints_master/presentation/pages/add_checkpoint_screen.dart';
-import 'package:safecheck_techno/features/admin/checkpoints_master/presentation/pages/checkpoints_list_screen.dart';
+import 'package:astha_engineering/features/admin/checkpoints_master/data/datasources/checkpoint_remote_data_source.dart';
+import 'package:astha_engineering/features/admin/checkpoints_master/data/repositories/checkpoint_repository_impl.dart';
+import 'package:astha_engineering/features/admin/checkpoints_master/domain/usecases/get_checkpoints.dart';
+import 'package:astha_engineering/features/admin/checkpoints_master/presentation/bloc/checkpoint_list_bloc.dart';
+import 'package:astha_engineering/features/admin/checkpoints_master/presentation/bloc/checkpoint_list_event.dart';
+import 'package:astha_engineering/features/admin/checkpoints_master/presentation/pages/add_checkpoint_screen.dart';
+import 'package:astha_engineering/features/admin/checkpoints_master/presentation/pages/checkpoints_list_screen.dart';
 
 // Certificate Configurator
-import 'package:safecheck_techno/features/admin/certificate_configurator/presentation/pages/certificate_configurator_screen.dart';
+import 'package:astha_engineering/features/admin/certificate_configurator/presentation/pages/certificate_configurator_screen.dart';
 
 // Renewals Master
-import 'package:safecheck_techno/features/admin/renewals_master/data/repositories/renewal_repository_impl.dart';
-import 'package:safecheck_techno/features/admin/renewals_master/domain/usecases/get_renewals.dart';
-import 'package:safecheck_techno/features/admin/renewals_master/presentation/bloc/renewal_list_bloc.dart';
-import 'package:safecheck_techno/features/admin/renewals_master/presentation/bloc/renewal_list_event.dart';
-import 'package:safecheck_techno/features/admin/renewals_master/presentation/pages/renewals_master_screen.dart';
+import 'package:astha_engineering/features/admin/renewals_master/data/repositories/renewal_repository_impl.dart';
+import 'package:astha_engineering/features/admin/renewals_master/domain/usecases/get_renewals.dart';
+import 'package:astha_engineering/features/admin/renewals_master/presentation/bloc/renewal_list_bloc.dart';
+import 'package:astha_engineering/features/admin/renewals_master/presentation/bloc/renewal_list_event.dart';
+import 'package:astha_engineering/features/admin/renewals_master/presentation/pages/renewals_master_screen.dart';
 
 // Reports Master
-import 'package:safecheck_techno/features/admin/reports_master/presentation/pages/reports_master_screen.dart';
+import 'package:astha_engineering/features/admin/reports_master/presentation/pages/reports_master_screen.dart';
+
+// Tracker Management
+import 'package:astha_engineering/features/admin/tracker_management/presentation/bindings/company_tracker_binding.dart';
+import 'package:astha_engineering/features/admin/tracker_management/presentation/pages/company_tracker_screen.dart';
+import 'package:astha_engineering/features/admin/tracker_management/presentation/bindings/manage_checklist_binding.dart';
+import 'package:astha_engineering/features/admin/tracker_management/presentation/pages/manage_checklist_screen.dart';
+import 'package:astha_engineering/features/admin/tracker_management/presentation/bindings/prepare_checklist_binding.dart';
+import 'package:astha_engineering/features/admin/tracker_management/presentation/pages/prepare_checklist_screen.dart';
+import 'package:astha_engineering/features/admin/tracker_management/presentation/pages/view_checklist_screen.dart';
 
 class AdminRoutes {
   static List<RouteBase> get routes => [
@@ -281,5 +290,31 @@ class AdminRoutes {
           builder: (context, state) => const ReportsMasterScreen(),
         ),
 
+        // ── Tracker Management ───────────────────────────────────────────
+        GoRoute(
+          path: Routes.companyTracker,
+          builder: (context, state) {
+            CompanyTrackerBinding().dependencies();
+            return const CompanyTrackerScreen();
+          },
+        ),
+        GoRoute(
+          path: Routes.manageChecklist,
+          builder: (context, state) {
+            ManageChecklistBinding().dependencies();
+            return const ManageChecklistScreen();
+          },
+        ),
+        GoRoute(
+          path: Routes.viewChecklist,
+          builder: (context, state) => const ViewChecklistScreen(),
+        ),
+        GoRoute(
+          path: Routes.prepareChecklist,
+          builder: (context, state) {
+            PrepareChecklistBinding().dependencies();
+            return const PrepareChecklistScreen();
+          },
+        ),
       ];
 }

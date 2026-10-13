@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:safecheck_techno/core/error/failures.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/data/datasources/equipment_remote_data_source.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/domain/entities/equipment_entity.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/domain/repositories/equipment_repository.dart';
+import 'package:astha_engineering/core/error/failures.dart';
+import 'package:astha_engineering/features/admin/equipment_management/data/datasources/equipment_remote_data_source.dart';
+import 'package:astha_engineering/features/admin/equipment_management/domain/entities/equipment_entity.dart';
+import 'package:astha_engineering/features/admin/equipment_management/domain/repositories/equipment_repository.dart';
 
 class EquipmentRepositoryImpl implements EquipmentRepository {
   final EquipmentRemoteDataSource remoteDataSource;

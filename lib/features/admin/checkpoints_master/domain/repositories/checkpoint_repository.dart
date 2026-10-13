@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:safecheck_techno/core/error/failures.dart';
-import 'package:safecheck_techno/features/admin/checkpoints_master/domain/entities/checkpoint_entity.dart';
+import 'package:astha_engineering/core/error/failures.dart';
+import 'package:astha_engineering/features/admin/checkpoints_master/domain/entities/checkpoint_entity.dart';
 
 abstract class CheckpointRepository {
   Future<Either<Failure, List<CheckpointEntity>>> getCheckpoints();

@@ -1,5 +1,5 @@
-import 'package:safecheck_techno/core/enums/user_role.dart';
-import 'package:safecheck_techno/routes/app_routes.dart';
+import 'package:astha_engineering/core/enums/user_role.dart';
+import 'package:astha_engineering/routes/app_routes.dart';
 
 class AppConstants {
   static const String appName = 'SafeCheck Techno';

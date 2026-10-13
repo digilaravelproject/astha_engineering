@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:safecheck_techno/core/error/failures.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/domain/entities/equipment_entity.dart';
+import 'package:astha_engineering/core/error/failures.dart';
+import 'package:astha_engineering/features/admin/equipment_management/domain/entities/equipment_entity.dart';
 
 abstract class EquipmentRepository {
   Future<Either<Failure, List<EquipmentEntity>>> getEquipments();

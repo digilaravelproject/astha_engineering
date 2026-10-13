@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:safecheck_techno/features/admin/site_management/data/models/site_model.dart';
+import 'package:astha_engineering/features/admin/site_management/data/models/site_model.dart';
 
 abstract class SiteRemoteDataSource {
   Future<List<SiteModel>> getSites();

@@ -1,4 +1,4 @@
-import 'package:safecheck_techno/features/admin/reports_master/domain/entities/report_entity.dart';
+import 'package:astha_engineering/features/admin/reports_master/domain/entities/report_entity.dart';
 
 class ReportModel extends ReportEntity {
   const ReportModel({

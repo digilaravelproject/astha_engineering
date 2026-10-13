@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:safecheck_techno/core/error/failures.dart';
-import 'package:safecheck_techno/features/common/parameter_management/domain/entities/parameter_entity.dart';
+import 'package:astha_engineering/core/error/failures.dart';
+import 'package:astha_engineering/features/common/parameter_management/domain/entities/parameter_entity.dart';
 
 abstract class ParameterRepository {
   Future<Either<Failure, List<ParameterEntity>>> getParameters(String parameterType);

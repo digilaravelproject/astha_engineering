@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/data/models/certificate_model.dart';
+import 'package:astha_engineering/features/admin/certificate_management/data/models/certificate_model.dart';
 
 abstract class CertificateRemoteDataSource {
   Future<List<CertificateModel>> getCertificates();

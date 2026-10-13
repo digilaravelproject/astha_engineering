@@ -43,4 +43,9 @@ class Routes {
   static const String reportsMaster = '/reportsMaster';
   static const String certificatePreview = '/certificatePreview';
   static const String customerRenewals = '/customerRenewals';
+  static const String companyTracker = '/companyTracker';
+  static const String manageChecklist = '/manageChecklist';
+  static const String viewChecklist = '/viewChecklist';
+  static const String prepareChecklist = '/prepareChecklist';
 }
+

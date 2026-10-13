@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:safecheck_techno/core/theme/bloc/theme_bloc.dart';
-import 'package:safecheck_techno/core/theme/bloc/theme_state.dart';
+import 'package:astha_engineering/core/theme/bloc/theme_bloc.dart';
+import 'package:astha_engineering/core/theme/bloc/theme_state.dart';
 
-import 'package:safecheck_techno/core/services/storage/hive_storage.dart';
-import 'package:safecheck_techno/core/services/storage/shared_prefs.dart';
-import 'package:safecheck_techno/core/services/local_notification_service.dart';
-import 'package:safecheck_techno/core/theme/light_theme.dart';
-import 'package:safecheck_techno/core/theme/dark_theme.dart';
-import 'package:safecheck_techno/routes/route_helper.dart';
+import 'package:astha_engineering/core/services/storage/hive_storage.dart';
+import 'package:astha_engineering/core/services/storage/shared_prefs.dart';
+import 'package:astha_engineering/core/services/local_notification_service.dart';
+import 'package:astha_engineering/core/theme/light_theme.dart';
+import 'package:astha_engineering/core/theme/dark_theme.dart';
+import 'package:astha_engineering/routes/route_helper.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

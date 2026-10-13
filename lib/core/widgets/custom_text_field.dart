@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:safecheck_techno/core/theme/app_colors.dart';
+import 'package:astha_engineering/core/theme/app_colors.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController? controller;
@@ -18,6 +18,7 @@ class CustomTextField extends StatelessWidget {
   final TextStyle? textStyle;
   final bool isReadOnly;
   final VoidCallback? onTap;
+  final void Function(String)? onChanged;
 
   const CustomTextField({
     super.key,
@@ -37,6 +38,7 @@ class CustomTextField extends StatelessWidget {
     this.textStyle,
     this.isReadOnly = false,
     this.onTap,
+    this.onChanged,
   });
 
   @override
@@ -53,6 +55,7 @@ class CustomTextField extends StatelessWidget {
       minLines: 1,
       readOnly: isReadOnly,
       onTap: onTap,
+      onChanged: onChanged,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: const TextStyle(color: Colors.black38, fontSize: 14, fontWeight: FontWeight.w400),

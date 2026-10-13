@@ -1,11 +1,11 @@
 import 'package:go_router/go_router.dart';
-import 'package:safecheck_techno/routes/app_routes.dart';
-import 'package:safecheck_techno/features/common/profile/presentation/pages/profile_screen.dart';
-import 'package:safecheck_techno/features/customer/certificate_management/presentation/pages/customer_certificates_screen.dart';
-import 'package:safecheck_techno/features/customer/dashboard/presentation/pages/customer_home_screen.dart';
-import 'package:safecheck_techno/features/customer/dashboard/presentation/pages/customer_main_layout_screen.dart';
-import 'package:safecheck_techno/features/customer/renewals_tracker/presentation/pages/customer_renewals_screen.dart';
-import 'package:safecheck_techno/features/customer/site_management/presentation/pages/customer_sites_screen.dart';
+import 'package:astha_engineering/routes/app_routes.dart';
+import 'package:astha_engineering/features/common/profile/presentation/pages/profile_screen.dart';
+import 'package:astha_engineering/features/customer/certificate_management/presentation/pages/customer_certificates_screen.dart';
+import 'package:astha_engineering/features/customer/dashboard/presentation/pages/customer_home_screen.dart';
+import 'package:astha_engineering/features/customer/dashboard/presentation/pages/customer_main_layout_screen.dart';
+import 'package:astha_engineering/features/customer/renewals_tracker/presentation/pages/customer_renewals_screen.dart';
+import 'package:astha_engineering/features/customer/site_management/presentation/pages/customer_sites_screen.dart';
 
 class CustomerRoutes {
   static List<RouteBase> get routes => [

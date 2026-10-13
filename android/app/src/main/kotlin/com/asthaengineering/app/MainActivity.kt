@@ -1,4 +1,4 @@
-package com.digiemperor.safecheck_techno
+package com.asthaengineering.app
 
 import io.flutter.embedding.android.FlutterActivity
 

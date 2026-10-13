@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:safecheck_techno/features/admin/checkpoints_master/domain/entities/checkpoint_entity.dart';
+import 'package:astha_engineering/features/admin/checkpoints_master/domain/entities/checkpoint_entity.dart';
 
 abstract class CheckpointListState extends Equatable {
   const CheckpointListState();

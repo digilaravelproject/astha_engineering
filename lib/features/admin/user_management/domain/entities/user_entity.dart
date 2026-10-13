@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:safecheck_techno/core/enums/user_role.dart';
+import 'package:astha_engineering/core/enums/user_role.dart';
 
 class UserEntity extends Equatable {
   final String id;

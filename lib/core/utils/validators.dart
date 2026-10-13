@@ -1,4 +1,4 @@
-import 'package:safecheck_techno/core/constants/app_strings.dart';
+import 'package:astha_engineering/core/constants/app_strings.dart';
 
 class Validators {
   static String? validateEmail(String? value) {

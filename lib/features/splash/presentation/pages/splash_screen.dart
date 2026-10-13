@@ -1,9 +1,9 @@
-import 'package:safecheck_techno/core/constants/app_strings.dart';
+import 'package:astha_engineering/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:safecheck_techno/core/constants/app_constants.dart';
-import 'package:safecheck_techno/core/services/storage/shared_prefs.dart';
-import 'package:safecheck_techno/routes/app_routes.dart';
+import 'package:astha_engineering/core/constants/app_constants.dart';
+import 'package:astha_engineering/core/services/storage/shared_prefs.dart';
+import 'package:astha_engineering/routes/app_routes.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:safecheck_techno/core/constants/app_strings.dart';
-import 'package:safecheck_techno/core/widgets/custom_button.dart';
-import 'package:safecheck_techno/core/widgets/custom_text_field.dart';
-import 'package:safecheck_techno/core/utils/validators.dart';
-import 'package:safecheck_techno/features/auth/presentation/widgets/auth_background.dart';
-import 'package:safecheck_techno/routes/app_routes.dart';
+import 'package:astha_engineering/core/constants/app_strings.dart';
+import 'package:astha_engineering/core/widgets/custom_button.dart';
+import 'package:astha_engineering/core/widgets/custom_text_field.dart';
+import 'package:astha_engineering/core/utils/validators.dart';
+import 'package:astha_engineering/features/auth/presentation/widgets/auth_background.dart';
+import 'package:astha_engineering/routes/app_routes.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});

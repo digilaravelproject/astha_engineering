@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/domain/usecases/get_equipments.dart';
+import 'package:astha_engineering/features/admin/equipment_management/domain/usecases/get_equipments.dart';
 
 import 'equipment_list_event.dart';
 import 'equipment_list_state.dart';

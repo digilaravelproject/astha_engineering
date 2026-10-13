@@ -1,4 +1,4 @@
-import 'package:safecheck_techno/core/utils/logger.dart';
+import 'package:astha_engineering/core/utils/logger.dart';
 // import 'package:razorpay_flutter/razorpay_flutter.dart';
 
 class RazorpayService {

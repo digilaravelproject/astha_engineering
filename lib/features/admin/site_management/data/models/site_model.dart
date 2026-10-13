@@ -1,4 +1,4 @@
-import 'package:safecheck_techno/features/admin/site_management/domain/entities/site_entity.dart';
+import 'package:astha_engineering/features/admin/site_management/domain/entities/site_entity.dart';
 
 class SiteModel extends SiteEntity {
   const SiteModel({

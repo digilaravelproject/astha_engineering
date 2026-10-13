@@ -1,8 +1,8 @@
-import 'package:safecheck_techno/core/constants/app_strings.dart';
+import 'package:astha_engineering/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:safecheck_techno/core/theme/app_colors.dart';
-import 'package:safecheck_techno/routes/app_routes.dart';
+import 'package:astha_engineering/core/theme/app_colors.dart';
+import 'package:astha_engineering/routes/app_routes.dart';
 
 class CustomerDetailsScreen extends StatelessWidget {
   const CustomerDetailsScreen({super.key});
@@ -78,6 +78,22 @@ class CustomerDetailsScreen extends StatelessWidget {
                       SizedBox(width: 6),
                       Text('+91 9876543210', style: TextStyle(color: Colors.grey)),
                     ],
+                  ),
+                  const SizedBox(height: 16),
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      context.push(Routes.companyTracker);
+                    },
+                    icon: const Icon(Icons.track_changes, size: 18),
+                    label: const Text('Manage Tracker'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.primary,
+                      foregroundColor: Colors.white,
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
                   ),
                 ],
               ),

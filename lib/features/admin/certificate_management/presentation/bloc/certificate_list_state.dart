@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/domain/entities/certificate_entity.dart';
+import 'package:astha_engineering/features/admin/certificate_management/domain/entities/certificate_entity.dart';
 
 abstract class CertificateListState extends Equatable {
   const CertificateListState();

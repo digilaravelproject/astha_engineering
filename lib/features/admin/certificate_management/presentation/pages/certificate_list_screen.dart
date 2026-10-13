@@ -1,12 +1,12 @@
-import 'package:safecheck_techno/core/constants/app_strings.dart';
+import 'package:astha_engineering/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:safecheck_techno/core/theme/app_colors.dart';
-import 'package:safecheck_techno/core/widgets/skeleton_loading_list.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/presentation/bloc/certificate_list_bloc.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/presentation/bloc/certificate_list_state.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/presentation/bloc/certificate_list_event.dart';
+import 'package:astha_engineering/core/theme/app_colors.dart';
+import 'package:astha_engineering/core/widgets/skeleton_loading_list.dart';
+import 'package:astha_engineering/features/admin/certificate_management/presentation/bloc/certificate_list_bloc.dart';
+import 'package:astha_engineering/features/admin/certificate_management/presentation/bloc/certificate_list_state.dart';
+import 'package:astha_engineering/features/admin/certificate_management/presentation/bloc/certificate_list_event.dart';
 
 class CertificateListScreen extends StatelessWidget {
   const CertificateListScreen({super.key});

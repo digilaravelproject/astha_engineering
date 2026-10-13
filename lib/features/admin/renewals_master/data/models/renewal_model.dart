@@ -1,4 +1,4 @@
-import 'package:safecheck_techno/features/admin/renewals_master/domain/entities/renewal_entity.dart';
+import 'package:astha_engineering/features/admin/renewals_master/domain/entities/renewal_entity.dart';
 
 class RenewalModel extends RenewalEntity {
   const RenewalModel({

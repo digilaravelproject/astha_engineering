@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/domain/usecases/get_certificates.dart';
+import 'package:astha_engineering/features/admin/certificate_management/domain/usecases/get_certificates.dart';
 
 import 'certificate_list_event.dart';
 import 'certificate_list_state.dart';

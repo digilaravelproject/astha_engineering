@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:safecheck_techno/features/admin/user_management/data/models/user_model.dart';
-import 'package:safecheck_techno/core/enums/user_role.dart';
+import 'package:astha_engineering/features/admin/user_management/data/models/user_model.dart';
+import 'package:astha_engineering/core/enums/user_role.dart';
 // Note: In real app, you would inject Dio or ApiClient here.
 
 abstract class UserRemoteDataSource {

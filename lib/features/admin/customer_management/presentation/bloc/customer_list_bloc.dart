@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:safecheck_techno/features/admin/customer_management/domain/usecases/get_customers.dart';
+import 'package:astha_engineering/features/admin/customer_management/domain/usecases/get_customers.dart';
 
 import 'customer_list_event.dart';
 import 'customer_list_state.dart';

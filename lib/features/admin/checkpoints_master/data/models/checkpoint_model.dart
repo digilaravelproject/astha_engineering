@@ -1,4 +1,4 @@
-import 'package:safecheck_techno/features/admin/checkpoints_master/domain/entities/checkpoint_entity.dart';
+import 'package:astha_engineering/features/admin/checkpoints_master/domain/entities/checkpoint_entity.dart';
 
 class CheckpointModel extends CheckpointEntity {
   const CheckpointModel({

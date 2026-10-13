@@ -1,4 +1,4 @@
-import 'package:safecheck_techno/features/admin/customer_management/domain/entities/customer_entity.dart';
+import 'package:astha_engineering/features/admin/customer_management/domain/entities/customer_entity.dart';
 
 class CustomerModel extends CustomerEntity {
   const CustomerModel({

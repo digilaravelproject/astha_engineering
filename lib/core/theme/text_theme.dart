@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:safecheck_techno/core/constants/dimensions.dart';
-import 'package:safecheck_techno/core/theme/app_colors.dart';
+import 'package:astha_engineering/core/constants/dimensions.dart';
+import 'package:astha_engineering/core/theme/app_colors.dart';
 
 class AppTextTheme {
   static TextTheme lightTextTheme = const TextTheme(

@@ -1,4 +1,4 @@
-import 'package:safecheck_techno/features/common/checklist_management/domain/entities/checklist_entity.dart';
+import 'package:astha_engineering/features/common/checklist_management/domain/entities/checklist_entity.dart';
 
 class ChecklistModel extends ChecklistEntity {
   const ChecklistModel({

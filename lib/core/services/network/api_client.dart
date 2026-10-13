@@ -1,11 +1,11 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
-import 'package:safecheck_techno/core/constants/app_urls.dart';
-import 'package:safecheck_techno/core/services/network/api_checker.dart';
-import 'package:safecheck_techno/core/services/network/network_info.dart';
-import 'package:safecheck_techno/core/services/network/response_model.dart';
-import 'package:safecheck_techno/core/services/storage/token_manger.dart';
-import 'package:safecheck_techno/core/utils/logger.dart';
+import 'package:astha_engineering/core/constants/app_urls.dart';
+import 'package:astha_engineering/core/services/network/api_checker.dart';
+import 'package:astha_engineering/core/services/network/network_info.dart';
+import 'package:astha_engineering/core/services/network/response_model.dart';
+import 'package:astha_engineering/core/services/storage/token_manger.dart';
+import 'package:astha_engineering/core/utils/logger.dart';
 
 class ApiClient {
   final Dio _dio;

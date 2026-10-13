@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:safecheck_techno/core/theme/app_colors.dart';
-import 'package:safecheck_techno/core/theme/text_theme.dart';
+import 'package:astha_engineering/core/theme/app_colors.dart';
+import 'package:astha_engineering/core/theme/text_theme.dart';
 
 ThemeData getLightTheme() {
   return ThemeData(

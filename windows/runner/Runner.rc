@@ -92,7 +92,7 @@ BEGIN
             VALUE "CompanyName", "com.digiemperor" "\0"
             VALUE "FileDescription", "safecheck_techno" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "safecheck_techno" "\0"
+            VALUE "InternalName", "com.asthaengineering.app" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2026 com.digiemperor. All rights reserved." "\0"
             VALUE "OriginalFilename", "safecheck_techno.exe" "\0"
             VALUE "ProductName", "safecheck_techno" "\0"

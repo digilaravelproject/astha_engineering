@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:safecheck_techno/features/admin/checkpoints_master/data/models/checkpoint_model.dart';
+import 'package:astha_engineering/features/admin/checkpoints_master/data/models/checkpoint_model.dart';
 
 abstract class CheckpointRemoteDataSource {
   Future<List<CheckpointModel>> getCheckpoints();

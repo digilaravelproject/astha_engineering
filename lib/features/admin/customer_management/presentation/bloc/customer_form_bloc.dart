@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:safecheck_techno/features/admin/customer_management/domain/usecases/add_customer.dart';
-import 'package:safecheck_techno/features/admin/customer_management/domain/usecases/update_customer.dart';
-import 'package:safecheck_techno/features/admin/customer_management/presentation/bloc/customer_form_event.dart';
-import 'package:safecheck_techno/features/admin/customer_management/presentation/bloc/customer_form_state.dart';
+import 'package:astha_engineering/features/admin/customer_management/domain/usecases/add_customer.dart';
+import 'package:astha_engineering/features/admin/customer_management/domain/usecases/update_customer.dart';
+import 'package:astha_engineering/features/admin/customer_management/presentation/bloc/customer_form_event.dart';
+import 'package:astha_engineering/features/admin/customer_management/presentation/bloc/customer_form_state.dart';
 
 class CustomerFormBloc extends Bloc<CustomerFormEvent, CustomerFormState> {
   final AddCustomer addCustomer;

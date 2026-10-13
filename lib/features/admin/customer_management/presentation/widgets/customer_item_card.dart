@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:safecheck_techno/core/theme/app_colors.dart';
-import 'package:safecheck_techno/routes/app_routes.dart';
+import 'package:astha_engineering/core/theme/app_colors.dart';
+import 'package:astha_engineering/routes/app_routes.dart';
 
 class CustomerItemCard extends StatelessWidget {
   final String companyName;

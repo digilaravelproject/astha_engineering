@@ -1,4 +1,4 @@
-import 'package:safecheck_techno/features/common/parameter_management/domain/entities/parameter_entity.dart';
+import 'package:astha_engineering/features/common/parameter_management/domain/entities/parameter_entity.dart';
 
 class ParameterModel extends ParameterEntity {
   const ParameterModel({

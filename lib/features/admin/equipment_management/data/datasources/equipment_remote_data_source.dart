@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/data/models/equipment_model.dart';
+import 'package:astha_engineering/features/admin/equipment_management/data/models/equipment_model.dart';
 
 abstract class EquipmentRemoteDataSource {
   Future<List<EquipmentModel>> getEquipments();

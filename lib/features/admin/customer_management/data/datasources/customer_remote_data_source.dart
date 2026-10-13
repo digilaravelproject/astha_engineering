@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:safecheck_techno/features/admin/customer_management/data/models/customer_model.dart';
+import 'package:astha_engineering/features/admin/customer_management/data/models/customer_model.dart';
 
 abstract class CustomerRemoteDataSource {
   Future<List<CustomerModel>> getCustomers();

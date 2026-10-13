@@ -1,4 +1,4 @@
-import 'package:safecheck_techno/features/common/certificate_management/domain/entities/certificate_entity.dart';
+import 'package:astha_engineering/features/common/certificate_management/domain/entities/certificate_entity.dart';
 
 class CertificateModel extends CertificateEntity {
   const CertificateModel({

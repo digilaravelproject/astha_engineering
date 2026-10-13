@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:safecheck_techno/core/error/failures.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/data/datasources/certificate_remote_data_source.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/domain/entities/certificate_entity.dart';
-import 'package:safecheck_techno/features/admin/certificate_management/domain/repositories/certificate_repository.dart';
+import 'package:astha_engineering/core/error/failures.dart';
+import 'package:astha_engineering/features/admin/certificate_management/data/datasources/certificate_remote_data_source.dart';
+import 'package:astha_engineering/features/admin/certificate_management/domain/entities/certificate_entity.dart';
+import 'package:astha_engineering/features/admin/certificate_management/domain/repositories/certificate_repository.dart';
 
 class CertificateRepositoryImpl implements CertificateRepository {
   final CertificateRemoteDataSource remoteDataSource;

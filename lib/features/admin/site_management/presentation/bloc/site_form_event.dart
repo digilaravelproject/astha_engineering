@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:safecheck_techno/features/admin/site_management/domain/entities/site_entity.dart';
+import 'package:astha_engineering/features/admin/site_management/domain/entities/site_entity.dart';
 
 abstract class SiteFormEvent extends Equatable {
   const SiteFormEvent();

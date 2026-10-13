@@ -6,6 +6,6 @@
 class AssetsRes {
   AssetsRes._();
 
-  static const String PROJECT_NAME = 'safecheck_techno';
+  static const String PROJECT_NAME = 'astha_engineering';
   static const String PROJECT_VERSION = '1.0.0+1';
 }

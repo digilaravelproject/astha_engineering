@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:safecheck_techno/features/admin/equipment_management/domain/entities/equipment_entity.dart';
+import 'package:astha_engineering/features/admin/equipment_management/domain/entities/equipment_entity.dart';
 
 abstract class EquipmentListState extends Equatable {
   const EquipmentListState();

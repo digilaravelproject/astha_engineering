@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:safecheck_techno/core/constants/image_constants.dart';
+import 'package:astha_engineering/core/constants/image_constants.dart';
 
 class AuthBackground extends StatelessWidget {
   final Widget child;

@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 
-import 'package:safecheck_techno/features/admin/customer_management/domain/entities/customer_entity.dart';
+import 'package:astha_engineering/features/admin/customer_management/domain/entities/customer_entity.dart';
 
 abstract class CustomerListState extends Equatable {
   const CustomerListState();

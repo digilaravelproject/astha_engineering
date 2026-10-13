@@ -1,5 +1,5 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:safecheck_techno/core/utils/logger.dart';
+import 'package:astha_engineering/core/utils/logger.dart';
 
 class LocalNotificationService {
   static final FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
@@ -23,7 +23,7 @@ class LocalNotificationService {
 
   static Future<void> showNotification({required int id, required String title, required String body, String? payload}) async {
     const AndroidNotificationDetails androidDetails = AndroidNotificationDetails(
-      'safecheck_techno_channel',
+      'astha_engineering_channel',
       'SafeCheck Notifications',
       importance: Importance.max,
       priority: Priority.high,

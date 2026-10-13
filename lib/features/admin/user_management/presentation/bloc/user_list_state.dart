@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:safecheck_techno/features/admin/user_management/domain/entities/user_entity.dart';
+import 'package:astha_engineering/features/admin/user_management/domain/entities/user_entity.dart';
 
 abstract class UserListState extends Equatable {
   const UserListState();

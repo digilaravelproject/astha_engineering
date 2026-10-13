@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:safecheck_techno/core/constants/app_strings.dart';
-import 'package:safecheck_techno/core/widgets/error_screen.dart';
+import 'package:astha_engineering/core/constants/app_strings.dart';
+import 'package:astha_engineering/core/widgets/error_screen.dart';
 
 class NoInternetScreen extends StatelessWidget {
   final VoidCallback onRetry;

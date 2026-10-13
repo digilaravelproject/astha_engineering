@@ -1,8 +1,8 @@
 import 'package:go_router/go_router.dart';
-import 'package:safecheck_techno/routes/app_routes.dart';
-import 'package:safecheck_techno/features/common/notifications/presentation/pages/notifications_screen.dart';
-import 'package:safecheck_techno/features/common/profile/presentation/pages/profile_screen.dart';
-import 'package:safecheck_techno/features/common/webview/presentation/pages/webview_screen.dart';
+import 'package:astha_engineering/routes/app_routes.dart';
+import 'package:astha_engineering/features/common/notifications/presentation/pages/notifications_screen.dart';
+import 'package:astha_engineering/features/common/profile/presentation/pages/profile_screen.dart';
+import 'package:astha_engineering/features/common/webview/presentation/pages/webview_screen.dart';
 
 class CommonRoutes {
   static List<RouteBase> get routes => [

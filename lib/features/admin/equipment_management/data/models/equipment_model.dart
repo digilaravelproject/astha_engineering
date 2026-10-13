@@ -1,4 +1,4 @@
-import 'package:safecheck_techno/features/admin/equipment_management/domain/entities/equipment_entity.dart';
+import 'package:astha_engineering/features/admin/equipment_management/domain/entities/equipment_entity.dart';
 
 class EquipmentModel extends EquipmentEntity {
   const EquipmentModel({
